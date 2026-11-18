@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>BLOCKED (D-08): number of business days before the committee meeting after which a request rolls to the following meeting. No value supplied by OPM.</description>
+        <description>Submission cutoff ahead of the committee meeting, counted in CALENDAR days by ITFCommitteeCalendar (B.6). Set to 7 per OPM: a request must be submitted at least a full week before a meeting to be heard at it, otherwise it rolls to the following meeting. Note the implementation counts calendar days, not business days.</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
         <name>x_snc_sas_positi_0.committee_cutoff_days</name>
@@ -20,7 +20,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-13 23:11:08</sys_updated_on>
         <type>integer</type>
-        <value/>
+        <value>7</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=41c99a77a5b54bc2adc4c025ec07578c"/>

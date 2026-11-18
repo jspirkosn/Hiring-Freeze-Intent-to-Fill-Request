@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>BLOCKED (D-08): day of week the Hiring Freeze Committee meets. No value supplied by OPM. ITFCommitteeCalendar (B.6) fails loudly by design while this is unset.</description>
+        <description>Day of week the Hiring Freeze Committee meets, read as GlideDateTime.getDayOfWeekLocalTime() where 1=Monday through 7=Sunday. Set to 1 (Monday) per OPM. Consumed by ITFCommitteeCalendar (B.6).</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
         <name>x_snc_sas_positi_0.committee_weekday</name>
@@ -20,7 +20,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-13 23:11:08</sys_updated_on>
         <type>integer</type>
-        <value/>
+        <value>1</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=6e23aa7730244ba8a226d6057d283b17"/>

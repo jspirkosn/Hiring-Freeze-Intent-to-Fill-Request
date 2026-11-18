@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="DELETE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>task</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value>3</default_value>
+        <default_value_override>true</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>state</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_snc_sas_positi_0_case</name>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_only_option_override>false</read_only_option_override>
+        <read_only_override>false</read_only_override>
+        <reference_qual/>
+        <reference_qual_override>false</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:51:10</sys_created_on>
+        <sys_id>c44d6464738c44b58330b5f06c6af103</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_dictionary_override_c44d6464738c44b58330b5f06c6af103</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:51:10</sys_updated_on>
+    </sys_dictionary_override>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_dictionary_override_c44d6464738c44b58330b5f06c6af103</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
     <sys_dictionary_override action="INSERT_OR_UPDATE">
         <attributes/>
         <attributes_override>false</attributes_override>
@@ -33,4 +76,42 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-05 19:51:10</sys_updated_on>
     </sys_dictionary_override>
+</record_update>]]></payload>
+        <payload_hash>2086532915</payload_hash>
+        <record_name>state</record_name>
+        <reverted_from/>
+        <source>4d0b44b997e49bd45c91b63de053afe5</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 17:13:01</sys_created_on>
+        <sys_id>0b2b843d97e49bd45c91b63de053afa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1db0c57a50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 17:13:01</sys_updated_on>
+        <type>Dictionary Entry Override</type>
+        <update_guid>432b843d6fe49bd45668be1ad6eab0a8</update_guid>
+        <update_guid_history>432b843d6fe49bd45668be1ad6eab0a8:0,88191e7ecad4db54a235d4b1e376b4b9:603390207,ef189e3a7dd4db541e951a9d342f18cb:-333364493,46c8fd2c1358d31443f9118c7dce9540:603390207</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 21:10:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary_override">sys_dictionary_override</sys_db_object>
+        <sys_id>2caffb04c486427b91fc4e6afce87349</sys_id>
+        <sys_metadata>c44d6464738c44b58330b5f06c6af103</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent display_value="Vacated Personnel Number">03241147fdb4442b8418b7b00990de1a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_dictionary_override_c44d6464738c44b58330b5f06c6af103</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_override_c44d6464738c44b58330b5f06c6af103">0b2b843d97e49bd45c91b63de053afa8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 21:10:23</sys_updated_on>
+    </sys_metadata_delete>
 </record_update>

@@ -17,7 +17,7 @@
         <logo/>
         <menu/>
         <name>Hiring Freeze / Intent to Fill Request</name>
-        <package_json/>
+        <package_json display_value="x_snc_sas_positi_0/x-snc-hiring-freeze-intent-to-fill-request/1.0.0/package.json" path="x_snc_sas_positi_0/x-snc-hiring-freeze-intent-to-fill-request/1.0.0/package.json">x_snc_sas_positi_0/x-snc-hiring-freeze-intent-to-fill-request/1.0.0/package.json</package_json>
         <package_resolver_version>1.0.0</package_resolver_version>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
