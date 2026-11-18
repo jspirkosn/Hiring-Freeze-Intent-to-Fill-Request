@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>A10: Requesters and OPM analysts edit a funding split only on a parent case they can write.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_snc_sas_positi_0_funding</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[var c = new GlideRecordSecure('x_snc_sas_positi_0_case');
+answer = c.get(current.getValue('parent_case')) && c.canWrite();]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:16</sys_created_on>
+        <sys_id>7adefe80940d42909df1f0281c98e6a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0_funding</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_security_acl_7adefe80940d42909df1f0281c98e6a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:16</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

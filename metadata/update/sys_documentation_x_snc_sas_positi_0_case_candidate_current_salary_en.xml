@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="candidate_current_salary" label="Candidate Current Salary" language="en" table="x_snc_sas_positi_0_case">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>candidate_current_salary</element>
+            <help/>
+            <hint/>
+            <label>Candidate Current Salary</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <plural>Candidate Current Salaries</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:09:42</sys_created_on>
+            <sys_id>2c4e0015f377459daf2480017510f813</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Candidate Current Salary</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_sas_positi_0_case_candidate_current_salary_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:09:42</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_case_type">
+    <sn_case_type action="INSERT_OR_UPDATE">
+        <case_type_table>x_snc_sas_positi_0_case</case_type_table>
+        <category>4</category>
+        <internal_name>x_snc_sas_positi_0.x_snc_sas_positi_0_case</internal_name>
+        <short_description>Request to fill a vacant or newly created position, including hiring freeze exception review by the Office of Personnel Management.</short_description>
+        <subtype/>
+        <sys_class_name>sn_case_type</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-06 03:15:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>56700316e77343aaae884033a05fc168</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0_case</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sn_case_type_56700316e77343aaae884033a05fc168</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-06 03:15:28</sys_updated_on>
+    </sn_case_type>
+</record_update>

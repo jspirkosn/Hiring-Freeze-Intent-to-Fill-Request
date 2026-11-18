@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Impersonate</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Impersonate">071ee5b253331200040729cac2dc348d</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:06:11</sys_created_on>
+        <sys_id>c1335788ee1d47d3bd24819320827b89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Impersonate</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_step_c1335788ee1d47d3bd24819320827b89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:06:11</sys_updated_on>
+        <table/>
+        <test display_value="ITFRoutingResolver resolves a distinct director, analyst and group for each department">d9d15f5d46c546baae933cfb24a82f76</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=c1335788ee1d47d3bd24819320827b89"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>c1335788ee1d47d3bd24819320827b89</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:36</sys_created_on>
+        <sys_id>563cf1ad6eb6436295ab3a195c48cf6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:36</sys_updated_on>
+        <value>{{step['12dca8870c744c49b8f5e4b2c5415e94'].user}}</value>
+        <variable display_value="User">586e2c4253e0220002c6435723dc3415</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c1335788ee1d47d3bd24819320827b89"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user</field>
+        <id>c1335788ee1d47d3bd24819320827b89</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:37</sys_created_on>
+        <sys_id>9d6231b8e766418191bbe56996cac543</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:37</sys_updated_on>
+        <table>var__m_atf_input_variable_071ee5b253331200040729cac2dc348d</table>
+        <value>{{step['12dca8870c744c49b8f5e4b2c5415e94'].user}}</value>
+    </sys_element_mapping>
+</record_update>

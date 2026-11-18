@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_snc_sas_positi_0.fulfiller" name="x_snc_sas_positi_0.fulfiller">2620a9cd267f450fb822d1d8983bf8cd</contains>
+        <role display_value="x_snc_sas_positi_0.committee" name="x_snc_sas_positi_0.committee">bad98a5dad3e4fb9b7cba80f590aa614</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:36:02</sys_created_on>
+        <sys_id>1b5925a4bc7242a895c87845e81fc1ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0.fulfiller.x_snc_sas_positi_0.committee</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_user_role_contains_1b5925a4bc7242a895c87845e81fc1ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:36:02</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

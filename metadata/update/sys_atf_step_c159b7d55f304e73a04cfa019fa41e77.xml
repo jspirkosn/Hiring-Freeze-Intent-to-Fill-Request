@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:47</sys_created_on>
+        <sys_id>c159b7d55f304e73a04cfa019fa41e77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_step_c159b7d55f304e73a04cfa019fa41e77</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:47</sys_updated_on>
+        <table/>
+        <test display_value="ITF Request Requirement decision table returns the correct basis for all six input combinations">c5e96bc741424aec9cf17c84aaab4feb</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=c159b7d55f304e73a04cfa019fa41e77"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>c159b7d55f304e73a04cfa019fa41e77</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:37</sys_created_on>
+        <sys_id>31392cacf23b4736a430a0d8f521f235</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:37</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>c159b7d55f304e73a04cfa019fa41e77</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:37</sys_created_on>
+        <sys_id>4093706e1f2944e9931bd53eeb2adc15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:37</sys_updated_on>
+        <value>(function (outputs, steps, params, stepResult, assertEqual) {
+    var DT1 = gs.getProperty('x_snc_sas_positi_0.dt_request_requirement');
+    var api = new sn_dt.DecisionTableAPI();
+
+    // The documented read pattern does NOT work: the object getDecisions()
+    // returns is a snapshot whose result_elements reads back as an empty
+    // string. Take sys_id, re-query, then read through the container.
+    function basisFor(exempt, overCap, trigger) {
+        var resp = api.getDecisions(DT1, { exempt: exempt, over_cap: overCap, itf_trigger: trigger });
+        if (!resp || !resp.length || !resp[0].sys_id) { return '(no matching row)'; }
+        var ans = new GlideRecord('sys_decision_multi_result');
+        if (!ans.get(resp[0].sys_id.toString())) { return '(answer record missing)'; }
+        var v = '';
+        try { v = ans.result_elements.request_basis.toString(); } catch (e) { v = ''; }
+        return v || '(answer has no value)';
+    }
+
+    describe('ITF Request Requirement decision table', function () {
+        it('has its sys_id published in the dt_request_requirement property', function () {
+            expect(DT1).toBeTruthy();
+        });
+        it('treats an exemption as decisive regardless of the other inputs', function () {
+            expect(basisFor(true, false, false)).toBe('not_required');
+            expect(basisFor(true, true, true)).toBe('not_required');
+        });
+        it('requires both bases when over cap and an ITF trigger coincide', function () {
+            expect(basisFor(false, true, true)).toBe('both');
+        });
+        it('requires only the hiring freeze basis when over cap alone', function () {
+            expect(basisFor(false, true, false)).toBe('hiring_freeze');
+        });
+        it('requires only the intent to fill basis when an ITF trigger alone', function () {
+            expect(basisFor(false, false, true)).toBe('intent_to_fill');
+        });
+        it('requires nothing when no condition applies', function () {
+            expect(basisFor(false, false, false)).toBe('not_required');
+        });
+    });
+})(outputs, steps, params, stepResult, assertEqual);
+jasmine.getEnv().execute();</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>6</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:46</sys_created_on>
+        <sys_id>3e5ebddc46ba4f668c4d0c3e91fea8cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_step_3e5ebddc46ba4f668c4d0c3e91fea8cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:46</sys_updated_on>
+        <table/>
+        <test display_value="Funding percentages on an uneven split total 100 when summed row by row">aa3e905339174577807a9f5b91275995</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=3e5ebddc46ba4f668c4d0c3e91fea8cc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e5ebddc46ba4f668c4d0c3e91fea8cc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:35</sys_created_on>
+        <sys_id>19bb48f991a5450f8e6ef26d8872f098</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:35</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e5ebddc46ba4f668c4d0c3e91fea8cc</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:35</sys_created_on>
+        <sys_id>abad2935619240b0b8626b1b80b6df7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:35</sys_updated_on>
+        <value>(function (outputs, steps, params, stepResult, assertEqual) {
+    function caseByMarker(marker) {
+        var c = new GlideRecord('x_snc_sas_positi_0_case');
+        c.addQuery('short_description', marker);
+        c.orderByDesc('sys_created_on');
+        c.setLimit(1);
+        c.query();
+        return c.next() ? c.getUniqueValue() : '';
+    }
+
+    var caseId = caseByMarker('ATF - uneven 60/40 funding split');
+
+    var rowTotal = 0, rowCount = 0;
+    var f = new GlideRecord('x_snc_sas_positi_0_funding');
+    f.addQuery('parent_case', caseId);
+    f.query();
+    while (f.next()) {
+        rowCount++;
+        rowTotal += parseFloat(f.getValue('funding_pct') || '0');
+    }
+
+    // Reported, deliberately NOT asserted. GlideAggregate SUM is measured
+    // returning the last row's value instead of the total on this column
+    // (COUNT is correct, SUM is not). Asserting the defect would turn an
+    // eventual platform fix into a test failure, so it is surfaced for a
+    // human to read instead.
+    var aggTotal = '(none)';
+    var agg = new GlideAggregate('x_snc_sas_positi_0_funding');
+    agg.addQuery('parent_case', caseId);
+    agg.addAggregate('SUM', 'funding_pct');
+    agg.query();
+    if (agg.next()) { aggTotal = agg.getAggregate('SUM', 'funding_pct'); }
+    stepResult.setOutputMessage(
+        'row-by-row total=' + rowTotal + ' over ' + rowCount +
+        ' rows; GlideAggregate SUM reported=' + aggTotal +
+        ' (if these now agree, the platform defect behind the B.2 deviation may be fixed)'
+    );
+
+    describe('Funding total for an uneven split', function () {
+        it('finds the case the previous step inserted', function () {
+            expect(caseId).toBeTruthy();
+        });
+        it('finds both funding rows', function () {
+            expect(rowCount).toBe(2);
+        });
+        it('totals exactly 100 when summed row by row', function () {
+            expect(rowTotal).toBe(100);
+        });
+    });
+})(outputs, steps, params, stepResult, assertEqual);
+jasmine.getEnv().execute();</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

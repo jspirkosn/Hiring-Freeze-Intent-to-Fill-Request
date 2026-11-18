@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Agency HR Administrator. Initiates Hiring Freeze / Intent to Fill requests, responds to additional-information prompts, and submits follow-on job requisitions.</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id>XtKG9FRo1pR3mPSgLQC+8ZBVFCIFQgFUB6MmHCFOU0g=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_sas_positi_0.requester</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>requester</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:36:01</sys_created_on>
+        <sys_id>1f6ec04a4e2045b8ab29fea9bac34df4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0.requester</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_user_role_1f6ec04a4e2045b8ab29fea9bac34df4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:36:01</sys_updated_on>
+    </sys_user_role>
+</record_update>

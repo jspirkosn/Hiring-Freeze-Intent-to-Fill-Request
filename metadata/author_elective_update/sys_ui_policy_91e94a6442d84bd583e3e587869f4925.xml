@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy">
+  <sys_ui_policy action="DELETE" apply_defaults="true">
+    <sys_id>91e94a6442d84bd583e3e587869f4925</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sys_ui_policy_91e94a6442d84bd583e3e587869f4925</sys_update_name>
+    <active>true</active>
+    <conditions>u_candidate_applicable=true</conditions>
+    <description/>
+    <global>true</global>
+    <inherit>false</inherit>
+    <isolate_script>false</isolate_script>
+    <model_id/>
+    <model_table/>
+    <on_load>true</on_load>
+    <order>100</order>
+    <reverse_if_false>true</reverse_if_false>
+    <run_scripts>false</run_scripts>
+    <script_false>function onCondition() {
+
+}</script_false>
+    <script_true>function onCondition() {
+
+}</script_true>
+    <set_values/>
+    <short_description>Candidate section</short_description>
+    <table>x_snc_sas_positi_0_case</table>
+    <ui_type>0</ui_type>
+    <view/>
+  </sys_ui_policy>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_ui_policy_91e94a6442d84bd583e3e587869f4925</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy">
+  <sys_ui_policy action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>91e94a6442d84bd583e3e587869f4925</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sys_ui_policy_91e94a6442d84bd583e3e587869f4925</sys_update_name>
+    <active>true</active>
+    <conditions>u_candidate_applicable=true</conditions>
+    <description/>
+    <global>true</global>
+    <inherit>false</inherit>
+    <isolate_script>false</isolate_script>
+    <model_id/>
+    <model_table/>
+    <on_load>true</on_load>
+    <order>100</order>
+    <reverse_if_false>true</reverse_if_false>
+    <run_scripts>false</run_scripts>
+    <script_false>function onCondition() {
+
+}</script_false>
+    <script_true>function onCondition() {
+
+}</script_true>
+    <set_values/>
+    <short_description>Candidate section</short_description>
+    <table>x_snc_sas_positi_0_case</table>
+    <ui_type>0</ui_type>
+    <view/>
+  </sys_ui_policy>
+</record_update>]]></payload>
+        <payload_hash>-1314746431</payload_hash>
+        <record_name>Candidate section</record_name>
+        <reverted_from/>
+        <source>180b3dec2b1c5310b7b1f93a5e91bf4d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:53:57</sys_created_on>
+        <sys_id>ee1bf1602b5c5310b7b1f93a5e91bfb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a188cc10e10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:53:57</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>6e1bf160b75c5310a21055e01c8a08b0</update_guid>
+        <update_guid_history>6e1bf160b75c5310a21055e01c8a08b0:-1203170176</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:47:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>03ce8179d13b446d821ecb42e5fbc999</sys_id>
+        <sys_metadata>91e94a6442d84bd583e3e587869f4925</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Candidate section</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent display_value="Intent to Fill">d2a4df985257490d954f0382ff6e53e9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_91e94a6442d84bd583e3e587869f4925</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_91e94a6442d84bd583e3e587869f4925">ee1bf1602b5c5310b7b1f93a5e91bfb1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:47:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

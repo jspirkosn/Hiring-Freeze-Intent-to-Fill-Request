@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_sas_positi_0.ITFCommitteeCalendar</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Returns the next Hiring Freeze Committee meeting date honouring the submission cutoff. Fails loud by design while committee_weekday and committee_cutoff_days remain unset (D-08).</description>
+        <mobile_callable>false</mobile_callable>
+        <name>ITFCommitteeCalendar</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// B.6 ITFCommitteeCalendar
+//
+// Script Include class body. Loaded via Now.include().
+// Class.create pattern: do NOT import Glide APIs here — they are auto-available
+// in the Script Include execution context.
+//
+// Returns the next Hiring Freeze Committee meeting date, honouring the
+// submission cutoff. Used verbatim from §14 B.6.
+//
+// committee_weekday and committee_cutoff_days are BLOCKED (D-08: OPM has not
+// supplied values), so both properties are intentionally empty. This class
+// therefore fails loud by design — it logs via gs.error and returns '' rather
+// than inventing a meeting date.
+var ITFCommitteeCalendar = Class.create();
+ITFCommitteeCalendar.prototype = {
+    initialize: function () {},
+
+    nextMeetingDate: function () {
+        var weekday = parseInt(gs.getProperty('x_snc_sas_positi_0.committee_weekday'), 10);
+        var cutoff = parseInt(gs.getProperty('x_snc_sas_positi_0.committee_cutoff_days'), 10);
+        if (isNaN(weekday) || isNaN(cutoff)) {
+            gs.error('ITF: committee_weekday or committee_cutoff_days is not set');
+            return '';
+        }
+
+        var d = new GlideDateTime();
+        var delta = (weekday - d.getDayOfWeekLocalTime() + 7) % 7;
+        while (delta < cutoff) {
+            delta += 7;
+        }
+        d.addDaysLocalTime(delta);
+        return d.getLocalDate().getValue();
+    },
+
+    type: 'ITFCommitteeCalendar',
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:14</sys_created_on>
+        <sys_id>2b116a1f536b485c8653070bf27f4fab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITFCommitteeCalendar</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_script_include_2b116a1f536b485c8653070bf27f4fab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

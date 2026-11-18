@@ -1,0 +1,19 @@
+{
+    "name": "x-snc-hiring-freeze-intent-to-fill-request",
+    "version": "1.0.0",
+    "description": "Digitizes the OPM Hiring Freeze / Intent to Fill request, executive certification, OPM analyst triage, weekly Hiring Freeze Committee disposition, and job-requisition handoff to ARCareers — replacing the manual PDF/email/Microsoft Access process. Aligns to OPM Policy #8 and the 11.21.2025 OPM Hiring Freeze / Intent to Fill form.",
+    "license": "UNLICENSED",
+    "imports": {
+        "#now:*": "./@types/servicenow/fluent/*/index.js"
+    },
+    "scripts": {
+        "build": "now-sdk build",
+        "deploy": "now-sdk install",
+        "transform": "now-sdk transform",
+        "types": "now-sdk dependencies"
+    },
+    "devDependencies": {
+        "@servicenow/sdk": "4.14.2",
+        "@servicenow/glide": "27.0.5"
+    }
+}

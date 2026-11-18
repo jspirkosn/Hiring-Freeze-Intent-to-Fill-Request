@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Inserts a case below the salary threshold with an ordinary job title, asserts all three flags are false and the evaluator returns not_required, then updates that same record to a high salary and a director title and asserts the before-update rule recomputes all three flags to true. Covers the condition-does-not-hold side on insert and the recompute behaviour on the separate update path.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>true</fail_on_server_error>
+        <name>ITF Compute Request Flags leaves the Policy 8 flags clear for an ordinary request and recomputes the</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:47</sys_created_on>
+        <sys_id>2f061133c8254891b8d6476b4aa546d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Compute Request Flags leaves the Policy 8 flags clear for an ordinary request and recomputes the</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_test_2f061133c8254891b8d6476b4aa546d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:47</sys_updated_on>
+        <test_origin>manual</test_origin>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=2f061133c8254891b8d6476b4aa546d1"/>
+</record_update>

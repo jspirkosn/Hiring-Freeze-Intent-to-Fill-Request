@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <access_method/>
+        <col_name_string>committee_meeting_date</col_name_string>
+        <index_col_name element="committee_meeting_date" name="x_snc_sas_positi_0_case">c84354bd75994dcdbb9ffa04154363dd<sys_dictionary element="committee_meeting_date" name="x_snc_sas_positi_0_case">c84354bd75994dcdbb9ffa04154363dd</sys_dictionary>
+        </index_col_name>
+        <logical_table_name>x_snc_sas_positi_0_case</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:10:55</sys_created_on>
+        <sys_id>a4b2a7f500cf4862aaf5ba597dbdc952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0_case</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_index_x_snc_sas_positi_0_case_committee_meeting_date</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:10:55</sys_updated_on>
+        <table/>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

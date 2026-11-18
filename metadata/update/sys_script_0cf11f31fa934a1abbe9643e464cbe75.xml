@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_sas_positi_0_case</collection>
+        <condition/>
+        <description>Derives salary_exceeds_threshold, title_contains_director and key_leadership_title from the request data. Runs unconditionally on insert and update: the spec condition using .changes() is deliberately omitted because a derive rule must not be gated on change detection. See docs/itf-security-and-logic.md B.1.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ITF Compute Request Flags</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[// B.1 ITF Compute Request Flags
+//
+// Business rule script for x_snc_sas_positi_0_case. Loaded via Now.include().
+// Modules (import/export) are not supported in a configuration-type SDK
+// project, so this is a legacy script using the platform-injected globals
+// (current, previous, gs, GlideRecord).
+//
+// Derives the three OPM review trigger flags from the request's own data:
+//   salary_exceeds_threshold  requested_salary > x_snc_sas_positi_0.itf_salary_threshold
+//   title_contains_director   "director" in the job title OR the classification title
+//   key_leadership_title      job title matches x_snc_sas_positi_0.key_leadership_titles
+//
+// DELIBERATE DEVIATION FROM §14 B.1 — the spec's condition
+//     current.requested_salary.changes() || current.job_title.changes() || current.classification.changes()
+// is NOT reproduced. See the B.1 section of docs/itf-security-and-logic.md for the
+// evidence. Summary: this rule DERIVES three fields from three source fields, so
+// gating it on change detection is the wrong gate. `previous` is null on insert,
+// so there is no prior value for a "has it changed" test to diverge from, and any
+// insert path that populates the source columns without tripping change detection
+// (import set, record generator reference-fill, template, REST) would leave all
+// three flags at their dictionary default of 0 while the source data is present.
+// The rule therefore runs UNCONDITIONALLY on before insert + update. It is cheap
+// (two gs.getProperty calls, one in-memory string scan, at most one single-record
+// read) and idempotent, so unconditional recomputation is both correct and
+// self-healing for records whose source fields were changed out of band.
+//
+// Never calls current.update() — this is a before rule.
+(function executeRule(current, previous) {
+    // Normalise a JS truthy/falsey value into the '1'/'0' string the platform
+    // stores for a True/False column.
+    //
+    // DELIBERATE DEVIATION FROM §14 B.1 — the spec passes raw JS booleans to
+    // setValue on Boolean columns. Do not. A JS `false` handed to setValue is
+    // stringified to the NON-EMPTY string "false", which boolean coercion reads
+    // as true, so a negative result can persist as 1. Going through '1'/'0'
+    // removes the coercion entirely and costs nothing.
+    function flag(value) {
+        return value ? '1' : '0';
+    }
+
+    // ---- salary_exceeds_threshold ------------------------------------------
+    // itf_salary_threshold is a STRING property (the platform has no decimal
+    // property type), so it must be parsed. Fail loud and flag for review if it
+    // is missing or non-numeric — under-flagging a salary is the unsafe
+    // direction for a hiring freeze control.
+    var thresholdStr = gs.getProperty('x_snc_sas_positi_0.itf_salary_threshold');
+    var threshold = parseFloat(thresholdStr);
+
+    if (!thresholdStr || isNaN(threshold)) {
+        gs.error(
+            'ITF: x_snc_sas_positi_0.itf_salary_threshold is not set or is not numeric; ' +
+                'flagging salary for OPM review',
+        );
+        current.setValue('salary_exceeds_threshold', flag(true));
+    } else {
+        var salaryStr = current.getValue('requested_salary');
+        var salary = parseFloat(salaryStr);
+        current.setValue(
+            'salary_exceeds_threshold',
+            flag(!!salaryStr && !isNaN(salary) && salary > threshold),
+        );
+    }
+
+    var jobTitle = (current.getValue('job_title') || '').toLowerCase();
+
+    // ---- title_contains_director -------------------------------------------
+    // Resolve the classification title with an explicit single-record read
+    // rather than dot-walking current.classification.title. On a before INSERT
+    // the record is not yet in the database, and relying on reference
+    // auto-dereference there is exactly the kind of implicit behaviour that
+    // made the original rule unverifiable. This mirrors the getRefRecord()
+    // pattern B.4 already uses.
+    var classTitle = '';
+    var classificationId = current.getValue('classification');
+    if (classificationId) {
+        var cls = new GlideRecord('x_snc_sas_positi_0_classification');
+        if (cls.get(classificationId)) {
+            classTitle = (cls.getValue('title') || '').toLowerCase();
+        }
+    }
+
+    current.setValue(
+        'title_contains_director',
+        flag(jobTitle.indexOf('director') > -1 || classTitle.indexOf('director') > -1),
+    );
+
+    // ---- key_leadership_title ----------------------------------------------
+    // Per spec, the key leadership list is matched against the requested job
+    // title only, not the classification title.
+    var keyList = (gs.getProperty('x_snc_sas_positi_0.key_leadership_titles') || '').split(',');
+    var isKey = false;
+    for (var i = 0; i < keyList.length; i++) {
+        var t = keyList[i].trim().toLowerCase();
+        if (t && jobTitle.indexOf(t) > -1) {
+            isKey = true;
+        }
+    }
+    current.setValue('key_leadership_title', flag(isKey));
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0cf11f31fa934a1abbe9643e464cbe75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Compute Request Flags</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_script_0cf11f31fa934a1abbe9643e464cbe75</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:14</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=0cf11f31fa934a1abbe9643e464cbe75"/>
+</record_update>

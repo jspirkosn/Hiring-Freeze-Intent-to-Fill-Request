@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer/>
+        <condition/>
+        <decision_table display_value="ITF Request Requirement">9433e73f4e75429e998c33f4fd6f04d7</decision_table>
+        <default_answer>true</default_answer>
+        <input_table>var__m_sys_decision_input_9433e73f4e75429e998c33f4fd6f04d7</input_table>
+        <label>ITF Request Requirement default result</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>600</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 02:53:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>60c5cea671c544d9ac37f1d7e1c39b08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Request Requirement default result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_decision_question_60c5cea671c544d9ac37f1d7e1c39b08</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 02:53:59</sys_updated_on>
+    </sys_decision_question>
+</record_update>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="posting_exemption_reason" table="x_snc_sas_positi_0_req_task" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>posting_exemption_reason</element>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:10:48</sys_created_on>
+            <sys_id>c86f1456669a406d8dff404688401aa3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>posting_exemption_reason</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_req_task_posting_exemption_reason</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:10:48</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IST 12 or above</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bf625514e8e649308ccac5cea3ccbbd8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>ist12_plus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MED 08 or above</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ab10ba002e944cf3971dd1a0d9e13370</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>med08_plus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>LES 10 or above</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>78a6b151796d4577b3f62415745f9ed4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>les10_plus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SPC 09 or above</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dfb17c8206e843c6b43938d92a9ef9f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>spc09_plus</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Executive</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>500</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9cf7f22f674e408db0b68b0e716a681c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>executive</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Extra Help</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>600</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce53603709a147f29e0ce7b3854f270d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>extra_help</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Emergency</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>700</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f320f854378d4b14937d8e151e1fc207</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:02</sys_updated_on>
+            <value>emergency</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Governor Authorized</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>800</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>630a35f0a1eb4a74b8fcf07f3233f0e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:03</sys_updated_on>
+            <value>governor_authorized</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>posting_exemption_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Title Adjustment</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_req_task</name>
+            <sequence>900</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>378b064e379e42638a2ceff7b372a6b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:03</sys_updated_on>
+            <value>title_adjustment</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

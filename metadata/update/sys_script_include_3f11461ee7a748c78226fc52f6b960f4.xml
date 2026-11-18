@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_sas_positi_0.ITFRequirementEvaluator</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Evaluates whether a request requires a Hiring Freeze and/or Intent to Fill basis via the Request Requirement decision table. Uses getDecisions (plural, returns an array) and fails loud when x_snc_sas_positi_0.dsas_department is unset rather than letting the HF-08 shared services trigger match every department.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>ITFRequirementEvaluator</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// B.4 ITFRequirementEvaluator
+//
+// Script Include class body. Loaded via Now.include().
+// Class.create pattern: do NOT import Glide APIs here — they are auto-available
+// in the Script Include execution context.
+//
+// Decides whether a request needs a Hiring Freeze and/or Intent to Fill basis by
+// gathering the exemption / cap / trigger inputs and handing them to the
+// Request Requirement decision table.
+//
+// TWO MANDATORY CORRECTIONS against §14 B.4 are applied here. Do not revert:
+//   1. getDecisions (plural), not getDecision. The real Brazil API is
+//      new sn_dt.DecisionTableAPI().getDecisions(tableSysId, inputs) and it
+//      returns an ARRAY. The answer VALUES are NOT readable off the returned
+//      object: it is a snapshot whose `result_elements` reads back empty.
+//      Take resp[0].sys_id, re-query sys_decision_multi_result, and read
+//      gr.result_elements.<name>. Guarded for null / empty array.
+//   2. dsas_department fail-loud guard. x_snc_sas_positi_0.dsas_department is
+//      BLOCKED (the cmn_department record does not exist). Without the guard an
+//      empty property makes `requesting_department != dsas` true for EVERY
+//      department, silently firing the HF-08 shared services trigger on every
+//      shared-services request. The guard logs via gs.error and returns the
+//      trigger as unresolved instead.
+var ITFRequirementEvaluator = Class.create();
+ITFRequirementEvaluator.prototype = {
+    initialize: function () {},
+
+    // Boolean columns come back as the strings '1'/'0' (or 'true'/'false' from
+    // some import paths), so normalise rather than trusting truthiness.
+    _isTrue: function (gr, field) {
+        var v = gr.getValue(field);
+        return v == '1' || v == 'true';
+    },
+
+    evaluate: function (caseId) {
+        var c = new GlideRecord('x_snc_sas_positi_0_case');
+        if (!c.get(caseId)) {
+            return { basis: '', error: 'Case not found' };
+        }
+
+        var cls = null;
+        if (!c.classification.nil()) {
+            cls = c.classification.getRefRecord();
+        }
+
+        var exempt =
+            (cls != null && this._isTrue(cls, 'hiring_freeze_exempt')) ||
+            c.getValue('employment_type') == 'extra_help';
+
+        // CORRECTION 2 — fail loud on an unset dsas_department.
+        var dsas = gs.getProperty('x_snc_sas_positi_0.dsas_department');
+        var sharedServicesTrigger = false;
+        if (cls != null && this._isTrue(cls, 'shared_services_series')) {
+            if (!dsas) {
+                gs.error(
+                    'ITF: x_snc_sas_positi_0.dsas_department is not set; ' +
+                        'cannot evaluate HF-08 shared services trigger',
+                );
+                return { basis: '', error: 'dsas_department property not set' };
+            }
+            sharedServicesTrigger = c.getValue('requesting_department') != dsas;
+        }
+
+        var trigger =
+            this._isTrue(c, 'salary_exceeds_threshold') ||
+            this._isTrue(c, 'title_contains_director') ||
+            this._isTrue(c, 'key_leadership_title') ||
+            (cls != null && cls.getValue('pay_table') == 'EXE') ||
+            sharedServicesTrigger;
+
+        var dtId = gs.getProperty('x_snc_sas_positi_0.dt_request_requirement');
+        if (!dtId) {
+            return { basis: '', error: 'Decision table property not set' };
+        }
+
+        var inputs = {};
+        inputs.exempt = exempt;
+        inputs.over_cap = this._isTrue(c, 'at_or_over_position_cap');
+        inputs.itf_trigger = trigger;
+
+        // CORRECTION 1 — getDecisions (plural), returns an array.
+        var resp = new sn_dt.DecisionTableAPI().getDecisions(dtId, inputs);
+        if (!resp || !resp.length || !resp[0].sys_id) {
+            return { basis: '', error: 'No decision returned' };
+        }
+
+        // The object getDecisions() returns is a SNAPSHOT, not a live
+        // GlideRecord: its `result_elements` reads back as an empty string and
+        // `resp[0].result_elements.request_basis` is always falsy. The answer
+        // values must be read by re-querying the answer record and going
+        // through its variable container. Verified on Brazil.
+        var ans = new GlideRecord('sys_decision_multi_result');
+        if (!ans.get(resp[0].sys_id.toString())) {
+            return { basis: '', error: 'Answer record not found' };
+        }
+        // Read the value BEFORE testing it. Do NOT write
+        // `if (!ans.result_elements.request_basis)` — a GlideElement from a
+        // variable container is not reliably truthy, and that guard rejected
+        // perfectly good answers (measured: the identical read without the
+        // guard returned 'intent_to_fill').
+        var basis = '';
+        try {
+            basis = ans.result_elements.request_basis.toString();
+        } catch (e) {
+            basis = '';
+        }
+        if (!basis) {
+            return { basis: '', error: 'Answer has no request_basis value' };
+        }
+
+        return { basis: basis, error: '' };
+    },
+
+    type: 'ITFRequirementEvaluator',
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:14</sys_created_on>
+        <sys_id>3f11461ee7a748c78226fc52f6b960f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITFRequirementEvaluator</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_script_include_3f11461ee7a748c78226fc52f6b960f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

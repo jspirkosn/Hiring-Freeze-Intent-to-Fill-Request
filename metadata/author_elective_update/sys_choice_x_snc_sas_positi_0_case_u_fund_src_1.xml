@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_fund_src_1" table="x_snc_sas_positi_0_case" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_fund_src_1</element>
+            <name>x_snc_sas_positi_0_case</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-29 17:43:45</sys_created_on>
+            <sys_id>15546f7b85f04fd987b0ebccd068f1c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_fund_src_1</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_case_u_fund_src_1</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-29 17:43:45</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_fund_src_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cash Funds</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>02cbba13a9e4434ba493e38ef64fd0cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:52</sys_updated_on>
+            <value>cash</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_fund_src_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Federal</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>169a4d22c3ec489dbe6a18d5e89fa9a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:52</sys_updated_on>
+            <value>federal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_fund_src_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>General Revenue</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>af62b91d30044893931af0fbe14f8c15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:53</sys_updated_on>
+            <value>general_revenue</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_fund_src_1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Special Revenue</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>396322323de244068b331636ba82fd71</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:53</sys_updated_on>
+            <value>special_revenue</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

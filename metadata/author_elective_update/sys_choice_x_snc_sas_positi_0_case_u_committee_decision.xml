@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_committee_decision" table="x_snc_sas_positi_0_case" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_committee_decision</element>
+            <name>x_snc_sas_positi_0_case</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-29 17:43:45</sys_created_on>
+            <sys_id>ac6e4588263a49ce842c97a9a9ebd14c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_committee_decision</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_case_u_committee_decision</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-29 17:43:45</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_committee_decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Approve</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7957ce0493aa410f8eb33e1470272fc5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:51</sys_updated_on>
+            <value>approved</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_committee_decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Deny</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>60e2fb5947a74979a665e0295182df83</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:51</sys_updated_on>
+            <value>denied</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_committee_decision</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Additional Info Requested</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5e5ff680c2d0415ca27bb4f32a69b23e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:51</sys_updated_on>
+            <value>more_info</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

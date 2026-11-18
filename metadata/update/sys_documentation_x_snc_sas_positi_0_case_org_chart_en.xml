@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="org_chart" label="Organizational Chart" language="en" table="x_snc_sas_positi_0_case">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>org_chart</element>
+            <help/>
+            <hint/>
+            <label>Organizational Chart</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <plural>Organizational Charts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:09:44</sys_created_on>
+            <sys_id>a6631d041cfa4ddc9a1071efb68f558a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Organizational Chart</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_sas_positi_0_case_org_chart_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:09:44</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

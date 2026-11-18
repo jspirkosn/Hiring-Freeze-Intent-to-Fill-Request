@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>5</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:47</sys_created_on>
+        <sys_id>f0ab8782f3b9463daf307ab59a864433</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_step_f0ab8782f3b9463daf307ab59a864433</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:47</sys_updated_on>
+        <table/>
+        <test display_value="ITF Compute Request Flags sets all three Policy 8 flags on insert and the evaluator classifies the r">2f0d9b101ae542fba0eaf0b322757199</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=f0ab8782f3b9463daf307ab59a864433"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f0ab8782f3b9463daf307ab59a864433</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:37</sys_created_on>
+        <sys_id>cd414ae275b14394bb51a1908152297f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:37</sys_updated_on>
+        <value>(function (outputs, steps, params, stepResult, assertEqual) {
+    // Re-found by marker, not steps('&lt;id&gt;') — see constraint (2) in the header.
+    function caseByMarker(marker) {
+        var c = new GlideRecord('x_snc_sas_positi_0_case');
+        c.addQuery('short_description', marker);
+        c.orderByDesc('sys_created_on');
+        c.setLimit(1);
+        c.query();
+        return c.next() ? c.getUniqueValue() : '';
+    }
+
+    var caseId = caseByMarker('ATF - flags on insert, all three triggered');
+
+    describe('ITFRequirementEvaluator on a flagged case', function () {
+        it('finds the case the previous step inserted', function () {
+            expect(caseId).toBeTruthy();
+        });
+        it('classifies a salary-and-title triggered request as intent_to_fill', function () {
+            var res = new ITFRequirementEvaluator().evaluate(caseId);
+            expect(res.error).toBe('');
+            expect(res.basis).toBe('intent_to_fill');
+        });
+    });
+})(outputs, steps, params, stepResult, assertEqual);
+jasmine.getEnv().execute();</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f0ab8782f3b9463daf307ab59a864433</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:37</sys_created_on>
+        <sys_id>d7566c6ce54d45dea67e343acc4ba012</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:37</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>

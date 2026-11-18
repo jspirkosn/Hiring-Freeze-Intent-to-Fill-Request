@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_client">
+  <sys_script_client action="DELETE" apply_defaults="true">
+    <sys_id>d727215196cc4a85b7a9cc3290a40e6c</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sys_script_client_d727215196cc4a85b7a9cc3290a40e6c</sys_update_name>
+    <active>true</active>
+    <applies_extended>false</applies_extended>
+    <description/>
+    <field/>
+    <global>true</global>
+    <isolate_script>false</isolate_script>
+    <messages/>
+    <name>Validate funding total = 100%</name>
+    <script><![CDATA[function onSubmit() {
+    var p1 = parseFloat(g_form.getValue('u_fund_pct_1')) || 0;
+    var p2 = parseFloat(g_form.getValue('u_fund_pct_2')) || 0;
+    var total = p1 + p2;
+    if (Math.abs(total - 100) > 0.001) {
+        g_form.addErrorMessage('Funding source percentages must total exactly 100%. Current total: ' + total + '%.');
+        return false;
+    }
+}]]></script>
+    <sys_name>Validate funding total = 100%</sys_name>
+    <table>x_snc_sas_positi_0_case</table>
+    <type>onSubmit</type>
+    <ui_type>10</ui_type>
+    <view/>
+  </sys_script_client>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_script_client_d727215196cc4a85b7a9cc3290a40e6c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_client"&gt;
+  &lt;sys_script_client action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;d727215196cc4a85b7a9cc3290a40e6c&lt;/sys_id&gt;
+    &lt;sys_scope display_value="x_snc_sas_positi_0"&gt;a0b679642bd85310b7b1f93a5e91bff4&lt;/sys_scope&gt;
+    &lt;sys_update_name&gt;sys_script_client_d727215196cc4a85b7a9cc3290a40e6c&lt;/sys_update_name&gt;
+    &lt;active&gt;true&lt;/active&gt;
+    &lt;applies_extended&gt;false&lt;/applies_extended&gt;
+    &lt;description/&gt;
+    &lt;field/&gt;
+    &lt;global&gt;true&lt;/global&gt;
+    &lt;isolate_script&gt;false&lt;/isolate_script&gt;
+    &lt;messages/&gt;
+    &lt;name&gt;Validate funding total = 100%&lt;/name&gt;
+    &lt;script&gt;&lt;![CDATA[function onSubmit() {
+    var p1 = parseFloat(g_form.getValue('u_fund_pct_1')) || 0;
+    var p2 = parseFloat(g_form.getValue('u_fund_pct_2')) || 0;
+    var total = p1 + p2;
+    if (Math.abs(total - 100) &gt; 0.001) {
+        g_form.addErrorMessage('Funding source percentages must total exactly 100%. Current total: ' + total + '%.');
+        return false;
+    }
+}]]&gt;&lt;/script&gt;
+    &lt;sys_name&gt;Validate funding total = 100%&lt;/sys_name&gt;
+    &lt;table&gt;x_snc_sas_positi_0_case&lt;/table&gt;
+    &lt;type&gt;onSubmit&lt;/type&gt;
+    &lt;ui_type&gt;10&lt;/ui_type&gt;
+    &lt;view/&gt;
+  &lt;/sys_script_client&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1459699791</payload_hash>
+        <record_name>Validate funding total = 100%</record_name>
+        <reverted_from/>
+        <source>180b3dec2b1c5310b7b1f93a5e91bf4d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:53:55</sys_created_on>
+        <sys_id>861bb1602b5c5310b7b1f93a5e91bfb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a188cc08900000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:53:55</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>c21bb160df5c5310dd825dfece4171b8</update_guid>
+        <update_guid_history>c21bb160df5c5310dd825dfece4171b8:-1927964398</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:47:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>26e619ee90524aa197d9bad76ccfa541</sys_id>
+        <sys_metadata>d727215196cc4a85b7a9cc3290a40e6c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate funding total = 100%</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent display_value="Intent to Fill">d2a4df985257490d954f0382ff6e53e9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_script_client_d727215196cc4a85b7a9cc3290a40e6c</sys_update_name>
+        <sys_update_version display_value="sys_script_client_d727215196cc4a85b7a9cc3290a40e6c">861bb1602b5c5310b7b1f93a5e91bfb9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:47:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

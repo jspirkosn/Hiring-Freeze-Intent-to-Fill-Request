@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="aa66cc3219ca48d4a97ec8ac264b56d7" label="ITF Funding Source" name="x_snc_sas_positi_0_funding" type="collection">
+        <element label="Funding Source" mandatory="true" name="funding_source" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Special Revenue" sequence="300" value="special_revenue"/>
+                <element inactive_on_update="false" label="General Revenue" sequence="100" value="general_revenue"/>
+                <element inactive_on_update="false" label="Cash Funds" sequence="400" value="cash"/>
+                <element inactive_on_update="false" label="Federal" sequence="200" value="federal"/>
+            </choice>
+        </element>
+        <element label="Parent Case" mandatory="true" name="parent_case" reference="x_snc_sas_positi_0_case" reference_cascade_rule="cascade" type="reference"/>
+        <element attributes="scale=2" label="Funding %" mandatory="true" max_length="5" name="funding_pct" type="decimal"/>
+        <index name="index">
+            <element name="parent_case"/>
+        </index>
+    </element>
+</database>

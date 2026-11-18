@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="parent_case" label="Parent Case" language="en" table="x_snc_sas_positi_0_funding">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>parent_case</element>
+            <help/>
+            <hint/>
+            <label>Parent Case</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_funding</name>
+            <plural>Parent Cases</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:09:48</sys_created_on>
+            <sys_id>ff8570b025614bc186b941858259c24d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Parent Case</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_sas_positi_0_funding_parent_case_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:09:48</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_sas_positi_0.ITFRoutingResolver</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Resolves a department's executive approver, OPM analyst and OPM group from the Department Routing decision table. Uses getDecisions (plural, returns an array).</description>
+        <mobile_callable>false</mobile_callable>
+        <name>ITFRoutingResolver</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[// B.5 ITFRoutingResolver
+//
+// Script Include class body. Loaded via Now.include().
+// Class.create pattern: do NOT import Glide APIs here — they are auto-available
+// in the Script Include execution context.
+//
+// Resolves the department's executive approver, OPM analyst and OPM group from
+// the Department Routing decision table.
+//
+// MANDATORY CORRECTION against §14 B.5, do not revert: getDecisions (plural),
+// not getDecision. The real Brazil API returns an ARRAY, and the answer VALUES
+// are NOT readable off the returned object (it is a snapshot whose
+// `result_elements` reads back empty). Take resp[0].sys_id, re-query
+// sys_decision_multi_result, and read gr.result_elements.<name>.
+var ITFRoutingResolver = Class.create();
+ITFRoutingResolver.prototype = {
+    initialize: function () {},
+
+    resolve: function (departmentId) {
+        var dtId = gs.getProperty('x_snc_sas_positi_0.dt_department_routing');
+        if (!dtId) {
+            return {
+                director: '',
+                analyst: '',
+                group: '',
+                error: 'Decision table property not set',
+            };
+        }
+
+        var inputs = {};
+        inputs.department = departmentId;
+
+        // CORRECTION — getDecisions (plural), returns an array.
+        var resp = new sn_dt.DecisionTableAPI().getDecisions(dtId, inputs);
+        if (!resp || !resp.length || !resp[0].sys_id) {
+            return { director: '', analyst: '', group: '', error: 'No decision returned' };
+        }
+
+        // The object getDecisions() returns is a SNAPSHOT, not a live
+        // GlideRecord: its `result_elements` reads back as an empty string.
+        // Re-query the answer record and read its variable container instead.
+        // Verified on Brazil.
+        var ans = new GlideRecord('sys_decision_multi_result');
+        if (!ans.get(resp[0].sys_id.toString())) {
+            return { director: '', analyst: '', group: '', error: 'Answer record not found' };
+        }
+
+        // Read values BEFORE testing them. A GlideElement from a variable
+        // container is not reliably truthy, so a `!r.opm_group` style guard
+        // rejects perfectly good answers.
+        function read(container, name) {
+            try {
+                return container[name].toString();
+            } catch (e) {
+                return '';
+            }
+        }
+
+        var r = ans.result_elements;
+        var director = read(r, 'director_approver');
+        var analyst = read(r, 'opm_analyst');
+        var group = read(r, 'opm_group');
+
+        if (!director && !analyst && !group) {
+            return { director: '', analyst: '', group: '', error: 'Answer has no values' };
+        }
+        return { director: director, analyst: analyst, group: group, error: '' };
+    },
+
+    type: 'ITFRoutingResolver',
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:14</sys_created_on>
+        <sys_id>d6d39b13c6ad49e99fead48eb0572358</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITFRoutingResolver</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_script_include_d6d39b13c6ad49e99fead48eb0572358</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

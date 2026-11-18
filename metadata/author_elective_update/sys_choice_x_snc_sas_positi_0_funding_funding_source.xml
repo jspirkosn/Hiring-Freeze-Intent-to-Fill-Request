@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="funding_source" table="x_snc_sas_positi_0_funding" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>funding_source</element>
+            <name>x_snc_sas_positi_0_funding</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:10:48</sys_created_on>
+            <sys_id>9c73319837cc4c0d848c5a1d59fd8706</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>funding_source</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_funding_funding_source</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:10:48</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>funding_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>General Revenue</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_funding</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>26c4a003e62c4da3b20cf9430de5aab3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:00</sys_updated_on>
+            <value>general_revenue</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>funding_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Federal</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_funding</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b79d70548744752ad938a9508838536</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:00</sys_updated_on>
+            <value>federal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>funding_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Special Revenue</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_funding</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0c3d01cf042d4833b67389afbc10a1db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:00</sys_updated_on>
+            <value>special_revenue</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>funding_source</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cash Funds</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_funding</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:38:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8f5521418cee4a818d2da6c159b7f147</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:38:00</sys_updated_on>
+            <value>cash</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

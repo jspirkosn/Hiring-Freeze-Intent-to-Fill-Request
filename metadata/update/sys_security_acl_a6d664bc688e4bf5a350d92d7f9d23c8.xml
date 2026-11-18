@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition table="x_snc_sas_positi_0_req_task">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </condition>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>A15: A requester edits only active requisition tasks assigned to them.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_snc_sas_positi_0_req_task</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[answer = current.assigned_to == gs.getUserID();]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:17</sys_created_on>
+        <sys_id>a6d664bc688e4bf5a350d92d7f9d23c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0_req_task</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_security_acl_a6d664bc688e4bf5a350d92d7f9d23c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:17</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

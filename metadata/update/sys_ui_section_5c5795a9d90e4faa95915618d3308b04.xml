@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Vacancy Information" section_id="5c5795a9d90e4faa95915618d3308b04" sys_domain="global" table="x_snc_sas_positi_0_case" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>3f2f0e3d76244faab4af083684bff5f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_vacated_by</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>bf616a300cd949bba55baba351ad2322</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_vacated_pers_num</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>3d903679269940aaa3044a047f6ae036</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>f718c12bcdef4c5d9aed751583bb8b35</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_date_vacated</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>d74a3fa3125647a7a64b41945f2b6adc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_vacancy_reason</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>876ff96a30ce4449af09301bbbb3923b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>1a66adb5d4a5405fb8bd6cfd7d86650f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Vacancy Information</caption>
+            <header>false</header>
+            <name>x_snc_sas_positi_0_case</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-05 19:51:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5c5795a9d90e4faa95915618d3308b04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sas_positi_0_case</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_ui_section_5c5795a9d90e4faa95915618d3308b04</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-05 19:51:12</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

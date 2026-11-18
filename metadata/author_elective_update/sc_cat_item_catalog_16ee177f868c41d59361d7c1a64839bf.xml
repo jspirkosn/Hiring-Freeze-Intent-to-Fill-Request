@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+  <sc_cat_item_catalog action="DELETE" apply_defaults="true">
+    <sys_id>16ee177f868c41d59361d7c1a64839bf</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sc_cat_item_catalog_16ee177f868c41d59361d7c1a64839bf</sys_update_name>
+    <sc_cat_item>6756bc8b2cb74370abfa55299508bf93</sc_cat_item>
+    <sc_catalog>e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+  </sc_cat_item_catalog>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sc_cat_item_catalog_16ee177f868c41d59361d7c1a64839bf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+  <sc_cat_item_catalog action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>16ee177f868c41d59361d7c1a64839bf</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sc_cat_item_catalog_16ee177f868c41d59361d7c1a64839bf</sys_update_name>
+    <sc_cat_item>6756bc8b2cb74370abfa55299508bf93</sc_cat_item>
+    <sc_catalog>e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+  </sc_cat_item_catalog>
+</record_update>]]></payload>
+        <payload_hash>-1150952699</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>814c96b69718db545c91b63de053afc2</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 20:05:28</sys_created_on>
+        <sys_id>695c96f69718db545c91b63de053af4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1ad50fe880000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 20:05:28</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>a55c96f60a18db545d37ddfb752c1c4a</update_guid>
+        <update_guid_history>a55c96f60a18db545d37ddfb752c1c4a:1452388656</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.">447b93652b6c1bd0b7b1f93a5e91bff2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 13:44:27</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>4cb7955002a24d2a9fe8977fda52aec9</sys_id>
+        <sys_metadata>16ee177f868c41d59361d7c1a64839bf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_16ee177f868c41d59361d7c1a64839bf</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_16ee177f868c41d59361d7c1a64839bf">695c96f69718db545c91b63de053af4b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 13:44:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

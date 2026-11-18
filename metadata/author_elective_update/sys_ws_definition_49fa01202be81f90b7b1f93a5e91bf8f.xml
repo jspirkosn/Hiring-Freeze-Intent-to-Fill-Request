@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="DELETE">
+        <active>true</active>
+        <base_uri>/api/now/mcp_exec_1794357557194</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl/>
+        <is_versioned>false</is_versioned>
+        <name>mcp_exec_1794357557194</name>
+        <namespace>now</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>mcp_exec_1794357557194</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:39:17</sys_created_on>
+        <sys_id>49fa01202be81f90b7b1f93a5e91bf8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>mcp_exec_1794357557194</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_ws_definition_49fa01202be81f90b7b1f93a5e91bf8f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:39:17</sys_updated_on>
+    </sys_ws_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_ws_definition_49fa01202be81f90b7b1f93a5e91bf8f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/now/mcp_exec_1794357557194</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl/><is_versioned>false</is_versioned><name>mcp_exec_1794357557194</name><namespace>now</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>mcp_exec_1794357557194</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-11 00:39:17</sys_created_on><sys_id>49fa01202be81f90b7b1f93a5e91bf8f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>mcp_exec_1794357557194</sys_name><sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package><sys_policy/><sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope><sys_update_name>sys_ws_definition_49fa01202be81f90b7b1f93a5e91bf8f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-11 00:39:17</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload_hash>-74326261</payload_hash>
+        <record_name>mcp_exec_1794357557194</record_name>
+        <reverted_from/>
+        <source>41e0a85f975cdf545c91b63de053af7a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:39:17</sys_created_on>
+        <sys_id>59fa01202be81f90b7b1f93a5e91bf94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1c80b79380000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:39:17</sys_updated_on>
+        <type>Scripted REST API</type>
+        <update_guid>c5fa0120dfe81f90a6c531d96d292293</update_guid>
+        <update_guid_history>c5fa0120dfe81f90a6c531d96d292293:-74326261</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:39:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_definition">sys_ws_definition</sys_db_object>
+        <sys_id>406160c86aa04604a8b9839cf1f1d710</sys_id>
+        <sys_metadata>49fa01202be81f90b7b1f93a5e91bf8f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>mcp_exec_1794357557194</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_ws_definition_49fa01202be81f90b7b1f93a5e91bf8f</sys_update_name>
+        <sys_update_version display_value="sys_ws_definition_49fa01202be81f90b7b1f93a5e91bf8f">59fa01202be81f90b7b1f93a5e91bf94</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:39:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

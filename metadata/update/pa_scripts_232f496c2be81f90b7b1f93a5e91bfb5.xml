@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_scripts">
+    <pa_scripts action="INSERT_OR_UPDATE">
+        <arguments>parent</arguments>
+        <description/>
+        <name>Offering by Service Portfolio</name>
+        <script><![CDATA[function offeringPortfolio() {
+	var p = current['parent'];
+	if (gs.nil(p)) return null;
+	var g = new GlideRecord('cmdb_ci_service');
+	if (g.get(p) && !gs.nil(g.getValue('spm_service_portfolio'))) return g.getValue('spm_service_portfolio');
+	return null;
+}
+offeringPortfolio();]]></script>
+        <sys_class_name>pa_scripts</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:57:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>232f496c2be81f90b7b1f93a5e91bfb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Offering by Service Portfolio</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>pa_scripts_232f496c2be81f90b7b1f93a5e91bfb5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:57:44</sys_updated_on>
+        <table>service_offering</table>
+    </pa_scripts>
+    <sys_translated_text action="delete_multiple" query="documentkey=232f496c2be81f90b7b1f93a5e91bfb5"/>
+</record_update>

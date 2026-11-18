@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Validate funding total = 100%</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    var p1 = parseFloat(g_form.getValue('u_fund_pct_1')) || 0;
+    var p2 = parseFloat(g_form.getValue('u_fund_pct_2')) || 0;
+    var total = p1 + p2;
+    if (Math.abs(total - 100) > 0.001) {
+        g_form.addErrorMessage('Funding source percentages must total exactly 100%. Current total: ' + total + '%.');
+        return false;
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:51:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0b488f29c01b4ca0a40384dea3b4151f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate funding total = 100%</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_script_client_0b488f29c01b4ca0a40384dea3b4151f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:51:11</sys_updated_on>
+        <table>x_snc_sas_positi_0_case</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

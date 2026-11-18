@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="topic">
+    <topic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_to_child_topics>false</apply_to_child_topics>
+        <available_for/>
+        <banner_image/>
+        <banner_image_url/>
+        <banner_img_alt_text/>
+        <description/>
+        <enable_user_criteria_check>false</enable_user_criteria_check>
+        <icon/>
+        <icon_url/>
+        <name>Office of Personnel Management</name>
+        <not_available_for/>
+        <order>10</order>
+        <parent_topic/>
+        <sys_class_name>topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:14:48</sys_created_on>
+        <sys_id>50405a7e9754db545c91b63de053af2a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Office of Personnel Management</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>topic_50405a7e9754db545c91b63de053af2a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:17:07</sys_updated_on>
+        <taxonomy display_value="Employee">1f5d5a40c3203010069aec4b7d40dd93</taxonomy>
+        <template display_value="emp_taxonomy_topic">4fb26c9cc3d030102ec1a589a840ddbd</template>
+        <topic_based_navigation>false</topic_based_navigation>
+        <topic_contributor/>
+        <topic_manager/>
+        <topic_path>Office of Personnel Management</topic_path>
+    </topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=50405a7e9754db545c91b63de053af2a"/>
+</record_update>

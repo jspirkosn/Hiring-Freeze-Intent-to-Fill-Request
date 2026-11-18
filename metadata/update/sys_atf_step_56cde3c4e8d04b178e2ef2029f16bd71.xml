@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <callable_outputs/>
+        <copied_from/>
+        <description/>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>5</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:46</sys_created_on>
+        <sys_id>56cde3c4e8d04b178e2ef2029f16bd71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_step_56cde3c4e8d04b178e2ef2029f16bd71</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:46</sys_updated_on>
+        <table/>
+        <test display_value="ITF Compute Request Flags leaves the Policy 8 flags clear for an ordinary request and recomputes the">2f061133c8254891b8d6476b4aa546d1</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=56cde3c4e8d04b178e2ef2029f16bd71"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>56cde3c4e8d04b178e2ef2029f16bd71</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:36</sys_created_on>
+        <sys_id>57687ec2a7614c438b7c4393b74718f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:36</sys_updated_on>
+        <value>(function (outputs, steps, params, stepResult, assertEqual) {
+    function caseByMarker(marker) {
+        var c = new GlideRecord('x_snc_sas_positi_0_case');
+        c.addQuery('short_description', marker);
+        c.orderByDesc('sys_created_on');
+        c.setLimit(1);
+        c.query();
+        return c.next() ? c.getUniqueValue() : '';
+    }
+
+    var caseId = caseByMarker('ATF - flags on insert, none triggered');
+
+    describe('ITFRequirementEvaluator on an unflagged case', function () {
+        it('finds the case the previous step inserted', function () {
+            expect(caseId).toBeTruthy();
+        });
+        it('classifies an ordinary request as not_required', function () {
+            var res = new ITFRequirementEvaluator().evaluate(caseId);
+            expect(res.error).toBe('');
+            expect(res.basis).toBe('not_required');
+        });
+    });
+})(outputs, steps, params, stepResult, assertEqual);
+jasmine.getEnv().execute();</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>56cde3c4e8d04b178e2ef2029f16bd71</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 05:37:36</sys_created_on>
+        <sys_id>902b6fc5a3304045943ffc780b630900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 05:37:36</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>

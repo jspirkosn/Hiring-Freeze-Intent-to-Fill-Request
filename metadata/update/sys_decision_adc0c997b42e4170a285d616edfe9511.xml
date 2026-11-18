@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision">
+    <sys_decision action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <answer_table>sys_decision_multi_result</answer_table>
+        <answer_type>reference</answer_type>
+        <delta/>
+        <description>Resolves the certifying director, the assigned OPM analyst and the OPM assignment group for a requesting department. Input: department. Outputs: director_approver, opm_analyst, opm_group. Consumed by ITFRoutingResolver.</description>
+        <enable_publishing>false</enable_publishing>
+        <label/>
+        <name>ITF Department Routing</name>
+        <reference_qualifier/>
+        <status/>
+        <sys_class_name>sys_decision</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 02:53:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>adc0c997b42e4170a285d616edfe9511</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Department Routing</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_decision_adc0c997b42e4170a285d616edfe9511</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 02:53:57</sys_updated_on>
+    </sys_decision>
+</record_update>

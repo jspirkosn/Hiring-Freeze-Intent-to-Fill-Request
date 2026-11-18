@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_scripts">
+    <pa_scripts action="INSERT_OR_UPDATE">
+        <arguments>parent</arguments>
+        <description/>
+        <name>Offering by Taxonomy Node</name>
+        <script><![CDATA[var getHierarchy = function(seed, parentField, tableName) {
+	var h = [];
+	while (seed) {
+		h.push(seed.toString());
+		var g = new GlideRecord(tableName);
+		if (g.get(seed)) { seed = g.getValue(parentField); } else { seed = null; }
+		if (new ArrayUtil().contains(h, seed)) break;
+		if (g.getValue(parentField) == g.getValue('sys_id')) break;
+	}
+	return h;
+};
+function offeringTaxonomy() {
+	var p = current['parent'];
+	if (gs.nil(p)) return null;
+	var g = new GlideRecord('cmdb_ci_service');
+	if (!g.get(p)) return null;
+	return getHierarchy(g.getValue('spm_taxonomy_node'), 'parent', 'spm_taxonomy_node');
+}
+offeringTaxonomy();]]></script>
+        <sys_class_name>pa_scripts</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:57:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f2fc5e097245f945c91b63de053af91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Offering by Taxonomy Node</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>pa_scripts_6f2fc5e097245f945c91b63de053af91</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:57:45</sys_updated_on>
+        <table>service_offering</table>
+    </pa_scripts>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f2fc5e097245f945c91b63de053af91"/>
+</record_update>

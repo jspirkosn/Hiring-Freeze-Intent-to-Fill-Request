@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>A02: A requester reads requests they are the subject of, requests they opened, or any request from their own department.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_snc_sas_positi_0_case</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[var dept = '';
+var u = new GlideRecord('sys_user');
+if (u.get(gs.getUserID())) { dept = u.getValue('department') || ''; }
+answer = current.internal_user == gs.getUserID() || current.opened_by == gs.getUserID() || (!!dept && current.requesting_department == dept);]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:17</sys_created_on>
+        <sys_id>80e756475cd94f2d946cf94e67e539fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0_case</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_security_acl_80e756475cd94f2d946cf94e67e539fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:17</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="employment_type" table="x_snc_sas_positi_0_case" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>employment_type</element>
+            <name>x_snc_sas_positi_0_case</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:10:33</sys_created_on>
+            <sys_id>a43aa2019e3e4861909c7caaf2d97ca0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>employment_type</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_case_employment_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:10:33</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Regular</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e0a0f0435a5d49baad9e311af0dea4b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:40</sys_updated_on>
+            <value>regular</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Extra Help</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0a340726de834d56a80295b5bc093f12</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:40</sys_updated_on>
+            <value>extra_help</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

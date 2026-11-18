@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="ITF Department Routing">adc0c997b42e4170a285d616edfe9511</decision_table>
+        <label>Health - director itf.demo.director, analyst itf.demo.leadership, group OPM Hiring Freeze Leadership</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 02:53:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e8377d200cc644ca9d70456937e1375f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Health - director itf.demo.director, analyst itf.demo.leadership, group OPM Hiring Freeze Leadership</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_decision_multi_result_e8377d200cc644ca9d70456937e1375f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 02:53:58</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=e8377d200cc644ca9d70456937e1375f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e8377d200cc644ca9d70456937e1375f</document_key>
+        <order/>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 02:54:10</sys_created_on>
+        <sys_id>6065ade027704c798f33a44c955be446</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 02:54:10</sys_updated_on>
+        <value>057458ed97a8d7d45c91b63de053af56</value>
+        <variable display_value="Director Approver">4cf4ffc9732741d8971f6ea32d457a90</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e8377d200cc644ca9d70456937e1375f</document_key>
+        <order/>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 02:54:11</sys_created_on>
+        <sys_id>e77384f993d942e7b40bc53d03f3253e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 02:54:11</sys_updated_on>
+        <value>747418ed97a8d7d45c91b63de053afdf</value>
+        <variable display_value="OPM Group">a532d26fde6d44eeaf7a6d4d24a1fe3d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e8377d200cc644ca9d70456937e1375f</document_key>
+        <order/>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 02:54:11</sys_created_on>
+        <sys_id>f816b9dc3cb54fd1a02badb84594b355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 02:54:11</sys_updated_on>
+        <value>d974d8ed97a8d7d45c91b63de053af0f</value>
+        <variable display_value="OPM Analyst">f62d06e222144a8abfd7e0678fbc27fd</variable>
+    </sys_variable_value>
+</record_update>

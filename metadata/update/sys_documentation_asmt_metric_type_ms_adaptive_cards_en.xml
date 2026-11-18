@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="ms_adaptive_cards" label="Outlook Actionable Message" language="en" table="asmt_metric_type">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>ms_adaptive_cards</element>
+            <help/>
+            <hint>Enable survey to use Outlook Actionable Message format in email notifications for supported clients</hint>
+            <label>Outlook Actionable Message</label>
+            <language>en</language>
+            <name>asmt_metric_type</name>
+            <plural>Outlook Actionable Messages</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-05 19:04:58</sys_created_on>
+            <sys_id>177e02362b9c9b50b7b1f93a5e91bf3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Outlook Actionable Message</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_documentation_asmt_metric_type_ms_adaptive_cards_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-05 19:04:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

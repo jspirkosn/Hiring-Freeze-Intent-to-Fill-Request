@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="state" table="x_snc_sas_positi_0_job_req" version="3">
+        <sys_choice_set action="DELETE">
+            <element>state</element>
+            <name>x_snc_sas_positi_0_job_req</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-29 17:43:47</sys_created_on>
+            <sys_id>845a5d136840491ba6f3fa626ba9560f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_job_req_state</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-29 17:43:47</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_choice_x_snc_sas_positi_0_job_req_state</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_choice action="INSERT_OR_UPDATE" field="state" table="x_snc_sas_positi_0_job_req" version="3"><sys_choice_set action="INSERT_OR_UPDATE"><element>state</element><name>x_snc_sas_positi_0_job_req</name><sys_class_name>sys_choice_set</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-29 17:43:47</sys_created_on><sys_id>845a5d136840491ba6f3fa626ba9560f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>state</sys_name><sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package><sys_policy/><sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope><sys_update_name>sys_choice_x_snc_sas_positi_0_job_req_state</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-29 17:43:47</sys_updated_on></sys_choice_set></sys_choice></record_update>]]></payload>
+        <payload_hash>-598083823</payload_hash>
+        <record_name>x_snc_sas_positi_0_job_req.state</record_name>
+        <reverted_from/>
+        <source>156abba597249bd45c91b63de053afc2</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 16:12:16</sys_created_on>
+        <sys_id>894df32d2ba05bd0b7b1f93a5e91bf5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1dad4b8600000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 16:12:16</sys_updated_on>
+        <type>Choice list</type>
+        <update_guid>454df32d74a05bd00efd0b0ee87e895c</update_guid>
+        <update_guid_history>454df32d74a05bd00efd0b0ee87e895c:-598083823,cd4df32d62a05bd07225f77717591355:-466595445,414df32d31a05bd0f4795c19f8659f2a:-1077792203,094df32d11a05bd00f7b0a5e0d426023:1466095960,854df32d39a05bd0021a18797e45b91c:-1120327745,06c8bd2c8958d314d8651f958e365bb6:1679411437</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 16:12:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>003cfc15d3dc494680684dcc328ffac4</sys_id>
+        <sys_metadata>845a5d136840491ba6f3fa626ba9560f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>state</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_choice_x_snc_sas_positi_0_job_req_state</sys_update_name>
+        <sys_update_version display_value="sys_choice_x_snc_sas_positi_0_job_req_state">894df32d2ba05bd0b7b1f93a5e91bf5d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 16:12:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

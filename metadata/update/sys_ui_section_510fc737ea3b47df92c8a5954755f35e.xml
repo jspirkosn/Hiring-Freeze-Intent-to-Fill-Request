@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Workforce Data" section_id="510fc737ea3b47df92c8a5954755f35e" sys_domain="global" table="x_snc_sas_positi_0_case" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>aff9b39e437047388d46b5d38297c85f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_authorized_count</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>4c3081717e034734a849418bafdae03c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_filled_count</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>60d59efe43b44e178d1174fda99c3293</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>e85709a2bbe14c98a99da17c679502d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_turnover_rate</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>fa99b21ce7be4fbe95c071464c0b5edd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:12</sys_created_on>
+            <sys_id>eb299c34161f47a7b6a0dfc430a1cb7b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:12</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Workforce Data</caption>
+            <header>false</header>
+            <name>x_snc_sas_positi_0_case</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-05 19:51:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>510fc737ea3b47df92c8a5954755f35e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sas_positi_0_case</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_ui_section_510fc737ea3b47df92c8a5954755f35e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-05 19:51:12</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

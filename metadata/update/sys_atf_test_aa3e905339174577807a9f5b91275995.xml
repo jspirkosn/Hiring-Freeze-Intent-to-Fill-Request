@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Creates a case funded 60 percent general revenue and 40 percent federal, then asserts a row-by-row sum of funding_pct equals 100 — the calculation ITF Submission Validation performs before allowing certification. Guards against reverting to GlideAggregate SUM, which was measured returning 40.00 for this exact split and would reject a legitimately funded request.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>true</fail_on_server_error>
+        <name>Funding percentages on an uneven split total 100 when summed row by row</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:47</sys_created_on>
+        <sys_id>aa3e905339174577807a9f5b91275995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Funding percentages on an uneven split total 100 when summed row by row</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_test_aa3e905339174577807a9f5b91275995</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:47</sys_updated_on>
+        <test_origin>manual</test_origin>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=aa3e905339174577807a9f5b91275995"/>
+</record_update>

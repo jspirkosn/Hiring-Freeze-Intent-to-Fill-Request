@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d2a4df985257490d954f0382ff6e53e9" extends="sn_gsm_government_service_case" label="Intent to Fill" name="x_snc_sas_positi_0_case" type="collection">
+        <element label="Vacated Personnel Number" max_length="20" name="vacated_personnel_number" type="string"/>
+        <element label="Offset Position Number" max_length="20" name="offset_position_number" type="string"/>
+        <element choice="3" default="budgeted" label="Budget Status" name="budget_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Budgeted" sequence="100" value="budgeted"/>
+                <element inactive_on_update="false" label="Unbudgeted" sequence="200" value="unbudgeted"/>
+            </choice>
+        </element>
+        <element attributes="scale=2" label="Requested Salary" max_length="12" name="requested_salary" type="decimal"/>
+        <element label="Salary Exceeds Threshold" name="salary_exceeds_threshold" read_only="true" read_only_option="instance_configured" type="boolean"/>
+        <element label="Director Certified On" name="director_certified_on" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element label="Grade" max_length="20" name="grade" type="string"/>
+        <element label="Job Title" max_length="100" name="job_title" type="string"/>
+        <element choice="3" default="hire" label="Personnel Action" name="personnel_action" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Promotion" sequence="200" value="promotion"/>
+                <element inactive_on_update="false" label="Hire" sequence="100" value="hire"/>
+            </choice>
+        </element>
+        <element label="Position Number" max_length="20" name="position_number" type="string"/>
+        <element label="Director Approver" name="director_approver" reference="sys_user" type="reference"/>
+        <element label="OPM Comments" max_length="4000" name="opm_comments" type="string"/>
+        <element label="Requisition Acknowledged On" name="requisition_acknowledged_on" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element label="Return Reason" name="return_reason" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Other" sequence="300" value="other"/>
+                <element inactive_on_update="false" label="Missing Information" sequence="200" value="missing_information"/>
+                <element inactive_on_update="false" label="Copy of Job Description" sequence="100" value="job_description_copy"/>
+            </choice>
+        </element>
+        <element label="Director Certified By" name="director_certified_by" read_only="true" read_only_option="instance_configured" reference="sys_user" type="reference"/>
+        <element label="Submitted On" name="submitted_on" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element label="Q2: Impact if Unfilled" max_length="4000" name="unfilled_impact" type="string"/>
+        <element label="Positions Filled" name="positions_filled" type="integer"/>
+        <element label="Vacancy Reason" name="vacancy_reason" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Transfer" sequence="400" value="transfer"/>
+                <element inactive_on_update="false" label="Resignation" sequence="100" value="resignation"/>
+                <element inactive_on_update="false" label="New Position" sequence="600" value="new_position"/>
+                <element inactive_on_update="false" label="Retirement" sequence="200" value="retirement"/>
+                <element inactive_on_update="false" label="Termination" sequence="300" value="termination"/>
+                <element inactive_on_update="false" label="Promotion" sequence="500" value="promotion"/>
+            </choice>
+        </element>
+        <element default="javascript:(function(){var u=new GlideRecord('sys_user');return u.get(gs.getUserID()) ? u.getValue('department') : '';})()" label="Requesting Department" max_length="32" name="requesting_department" reference="cmn_department" type="reference"/>
+        <element label="Title Contains Director" name="title_contains_director" read_only="true" read_only_option="instance_configured" type="boolean"/>
+        <element label="At or Over Position Cap" name="at_or_over_position_cap" type="boolean"/>
+        <element label="Key Leadership Title" name="key_leadership_title" read_only="true" read_only_option="instance_configured" type="boolean"/>
+        <element label="Vacated Date" name="vacated_date" type="glide_date"/>
+        <element label="Positions Authorized" name="positions_authorized" type="integer"/>
+        <element label="Q3: Fit with Streamlining" max_length="4000" name="streamlining_fit" type="string"/>
+        <element label="Candidate Name" max_length="100" name="candidate_name" type="string"/>
+        <element attributes="scale=2" label="Turnover Rate (%)" max_length="5" name="turnover_rate_pct" type="decimal"/>
+        <element label="Position Responsibilities" max_length="4000" name="position_responsibilities" type="string"/>
+        <element label="OPM Decision By" name="opm_decision_by" reference="sys_user" type="reference"/>
+        <element label="Work Location" name="work_location" reference="cmn_location" type="reference"/>
+        <element label="OPM Decision On" name="opm_decision_on" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element attributes="scale=2" label="Candidate Current Salary" max_length="12" name="candidate_current_salary" type="decimal"/>
+        <element choice="3" default="screening" label="Request Status" name="request_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Screening" sequence="100" value="screening"/>
+                <element inactive_on_update="false" label="Closed" sequence="1100" value="closed"/>
+                <element inactive_on_update="false" label="Revision Requested" sequence="400" value="revision_requested"/>
+                <element inactive_on_update="false" label="Not Required" sequence="1200" value="not_required"/>
+                <element inactive_on_update="false" label="OPM Review" sequence="500" value="opm_review"/>
+                <element inactive_on_update="false" label="Withdrawn" sequence="1300" value="withdrawn"/>
+                <element inactive_on_update="false" label="Decision Issued" sequence="800" value="decision_issued"/>
+                <element inactive_on_update="false" label="Requisition Pending" sequence="900" value="requisition_pending"/>
+                <element inactive_on_update="false" label="Intake" sequence="200" value="intake"/>
+                <element inactive_on_update="false" label="Requisition Submitted" sequence="1000" value="requisition_submitted"/>
+                <element inactive_on_update="false" label="Awaiting Certification" sequence="300" value="awaiting_certification"/>
+                <element inactive_on_update="false" label="Scheduled for Committee" sequence="700" value="scheduled_for_committee"/>
+                <element inactive_on_update="false" label="Awaiting Information" sequence="600" value="awaiting_information"/>
+            </choice>
+        </element>
+        <element choice="3" default="regular" label="Employment Type" name="employment_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Extra Help" sequence="200" value="extra_help"/>
+                <element inactive_on_update="false" label="Regular" sequence="100" value="regular"/>
+            </choice>
+        </element>
+        <element label="Committee Meeting Date" name="committee_meeting_date" type="glide_date"/>
+        <element label="Business Area" max_length="40" name="business_area" type="string"/>
+        <element label="Additional Information Response" max_length="4000" name="additional_info_response" type="string"/>
+        <element label="Candidate Current Grade" max_length="20" name="candidate_current_grade" type="string"/>
+        <element label="Vacated By Name" max_length="100" name="vacated_by_name" type="string"/>
+        <element label="Candidate Personnel Number" max_length="20" name="candidate_personnel_number" type="string"/>
+        <element label="Committee Decision" name="committee_decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Denied" sequence="200" value="denied"/>
+                <element inactive_on_update="false" label="Approved" sequence="100" value="approved"/>
+                <element inactive_on_update="false" label="Additional Info Requested" sequence="300" value="more_info"/>
+            </choice>
+        </element>
+        <element label="Division" name="division" reference="cmn_department" reference_qual="javascript:'parent=' + current.requesting_department" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Organizational Chart" name="org_chart" type="file_attachment"/>
+        <element label="Q1: Can Duties Be Absorbed" max_length="4000" name="duties_absorbed_explanation" type="string"/>
+        <element label="Classification" name="classification" reference="x_snc_sas_positi_0_classification" reference_qual="active=true" type="reference"/>
+        <element label="Request Basis" name="request_basis" read_only="true" read_only_option="instance_configured" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not Required" sequence="100" value="not_required"/>
+                <element inactive_on_update="false" label="Both" sequence="400" value="both"/>
+                <element inactive_on_update="false" label="Hiring Freeze" sequence="200" value="hiring_freeze"/>
+                <element inactive_on_update="false" label="Intent to Fill" sequence="300" value="intent_to_fill"/>
+            </choice>
+        </element>
+    </element>
+</database>

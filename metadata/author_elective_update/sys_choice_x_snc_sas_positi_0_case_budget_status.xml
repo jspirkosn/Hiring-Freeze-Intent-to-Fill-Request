@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="budget_status" table="x_snc_sas_positi_0_case" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>budget_status</element>
+            <name>x_snc_sas_positi_0_case</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:10:32</sys_created_on>
+            <sys_id>6b02a755f7f649eb8758935551b3c9ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>budget_status</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_choice_x_snc_sas_positi_0_case_budget_status</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:10:32</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>budget_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Budgeted</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7249df3da20e49beb4e8dd528f1025e4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:38</sys_updated_on>
+            <value>budgeted</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>budget_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unbudgeted</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-14 05:37:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ee61d3682c1848f0a4df462405315557</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-14 05:37:38</sys_updated_on>
+            <value>unbudgeted</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

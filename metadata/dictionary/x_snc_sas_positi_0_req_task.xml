@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="53d112e1f3dd44e4a33540795d03d6e4" extends="sn_gsm_government_service_task" label="Job Requisition Task" name="x_snc_sas_positi_0_req_task" type="collection">
+        <element label="Hiring Official" name="hiring_official" reference="sys_user" type="reference"/>
+        <element label="Submitted On" name="submitted_on" type="glide_date_time"/>
+        <element label="Exemption Justification" max_length="4000" name="exemption_justification" type="string"/>
+        <element label="Minimum Qualifications" max_length="4000" name="minimum_qualifications" type="string"/>
+        <element label="Posting Exemption Reason" name="posting_exemption_reason" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Title Adjustment" sequence="900" value="title_adjustment"/>
+                <element inactive_on_update="false" label="Governor Authorized" sequence="800" value="governor_authorized"/>
+                <element inactive_on_update="false" label="LES 10 or above" sequence="300" value="les10_plus"/>
+                <element inactive_on_update="false" label="Executive" sequence="500" value="executive"/>
+                <element inactive_on_update="false" label="MED 08 or above" sequence="200" value="med08_plus"/>
+                <element inactive_on_update="false" label="IST 12 or above" sequence="100" value="ist12_plus"/>
+                <element inactive_on_update="false" label="Extra Help" sequence="600" value="extra_help"/>
+                <element inactive_on_update="false" label="SPC 09 or above" sequence="400" value="spc09_plus"/>
+                <element inactive_on_update="false" label="Emergency" sequence="700" value="emergency"/>
+            </choice>
+        </element>
+        <element label="Posting Business Days" name="posting_business_days" type="integer"/>
+        <element choice="3" default="external" label="Posting Type" name="posting_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Internal" sequence="200" value="internal"/>
+                <element inactive_on_update="false" label="External" sequence="100" value="external"/>
+            </choice>
+        </element>
+        <element label="Posting Description" name="posting_description" type="html"/>
+    </element>
+</database>

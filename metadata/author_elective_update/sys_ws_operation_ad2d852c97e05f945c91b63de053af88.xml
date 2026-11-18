@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="DELETE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/now/mcp_exec_1794358126333/run</default_operation_uri>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>run</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+  try {
+    var result;
+    var __result = (function() {
+      var OFFERING='2054830f97d89f545c91b63de053af30', SERVICE='2df303cb97d89f545c91b63de053af6a';
+      var D={dev:'221f3db5c6112284009f4becd3039cc9',it:'221f79b7c6112284005d646b76ab978c',fin:'a581ab703710200044e0bfc8bcbe5de8',cs:'5d7f17f03710200044e0bfc8bcbe5d43',pm:'9a7ed3f03710200044e0bfc8bcbe5db7'};
+      var B={hr:'9dd58ec0870221003ff35d88e3e3ec16',it:'ac26c204870221003ff35d88e3e3ec61',fin:'bb06c204870221003ff35d88e3e3ec88',legal:'2d26c204870221003ff35d88e3e3ec61'};
+      B.legal='2d26c204870221003ff35d88e3e3ec62';
+      var cases=[
+       {d:15,h:9, t:'Revenue Agent II',cc:'R041C',g:'GS06',pos:'22104511',dep:D.fin,div:B.fin,city:'Little Rock',sal:48500,vr:'resignation',fs:'general_revenue',dec:'approved',st:'3',close:4,auth:40,fill:36,to:14},
+       {d:13,h:14,t:'Licensing Specialist',cc:'C056C',g:'GS05',pos:'22104622',dep:D.cs,div:B.legal,city:'Little Rock',sal:42300,vr:'retirement',fs:'special_revenue',dec:'approved',st:'3',close:5,auth:12,fill:10,to:9},
+       {d:12,h:10,t:'IT Support Technician',cc:'D063C',g:'IT04',pos:'22105031',dep:D.it,div:B.it,city:'Conway',sal:45900,vr:'resignation',fs:'cash',dec:'denied',st:'3',close:3,auth:18,fill:17,to:11},
+       {d:10,h:11,t:'Accountant I',cc:'A091C',g:'GS06',pos:'22105107',dep:D.fin,div:B.fin,city:'Little Rock',sal:47200,vr:'promotion',fs:'general_revenue',dec:'approved',st:'3',close:4,auth:22,fill:20,to:8},
+       {d:9, h:15,t:'Program Coordinator',cc:'P003C',g:'GS07',pos:'22105219',dep:D.pm,div:B.hr,city:'Fayetteville',sal:52800,vr:'new_position',fs:'federal',dec:'more_info',st:'18',close:0,auth:6,fill:6,to:5},
+       {d:7, h:9, t:'Investigator',cc:'G127C',g:'GS08',pos:'22105344',dep:D.cs,div:B.legal,city:'Jonesboro',sal:55400,vr:'termination',fs:'general_revenue',dec:'denied',st:'3',close:4,auth:9,fill:8,to:16},
+       {d:6, h:13,t:'Fiscal Support Specialist',cc:'C024C',g:'GS04',pos:'22105402',dep:D.fin,div:B.fin,city:'Hot Springs',sal:38700,vr:'transfer',fs:'cash',dec:'approved',st:'3',close:3,auth:15,fill:13,to:12},
+       {d:4, h:10,t:'Database Administrator',cc:'D034C',g:'IT07',pos:'22105518',dep:D.it,div:B.it,city:'Little Rock',sal:78900,vr:'resignation',fs:'general_revenue',dec:'more_info',st:'18',close:0,auth:4,fill:3,to:18},
+       {d:2, h:16,t:'Caseworker',cc:'S017C',g:'GS06',pos:'22105630',dep:D.cs,div:B.hr,city:'Pine Bluff',sal:44100,vr:'resignation',fs:'federal',dec:'',st:'50',close:0,auth:30,fill:26,to:21},
+       {d:1, h:11,t:'Payroll Services Specialist',cc:'A047C',g:'GS05',pos:'22105745',dep:D.dev,div:B.hr,city:'Little Rock',sal:41600,vr:'retirement',fs:'general_revenue',dec:'',st:'10',close:0,auth:8,fill:7,to:7}
+      ];
+      var made=[];
+      cases.forEach(function(c){
+       var op=new GlideDateTime(); op.addDaysUTC(-c.d); var p=op.getValue().split(' ')[0]; op.setValue(p+' '+(c.h+6<10?'0':'')+(c.h+6)+':15:00');
+       var g=new GlideRecord('x_snc_sas_positi_0_case'); g.initialize(); g.setWorkflow(false);
+       g.setValue('short_description','Intent to Fill - '+c.t+' ('+c.pos+')');
+       g.setValue('service_offering',OFFERING); g.setValue('business_service',SERVICE);
+       g.setValue('opened_at',op.getValue()); g.setValue('contact_type','web'); g.setValue('priority','4');
+       g.setValue('u_job_title',c.t); g.setValue('u_class_code',c.cc); g.setValue('u_grade',c.g); g.setValue('u_position_number',c.pos);
+       g.setValue('u_department',c.dep); g.setValue('u_division',c.div); g.setValue('u_city_location',c.city); g.setValue('u_business_area','State Agency Operations');
+       g.setValue('u_request_date',p); g.setValue('u_vacated_by', c.vr=='new_position'?'N/A (new position)':'Prior incumbent');
+       g.setValue('u_vacancy_reason',c.vr); g.setValue('u_budget_status','budgeted'); g.setValue('u_fund_src_1',c.fs); g.setValue('u_fund_pct_1','100');
+       g.setValue('u_authorized_count',c.auth); g.setValue('u_filled_count',c.fill); g.setValue('u_turnover_rate',c.to);
+       g.setValue('u_requested_salary',c.sal); g.setValue('u_current_salary',c.sal);
+       g.setValue('u_responsibilities','Core duties of the '+c.t+' position supporting agency operations.');
+       g.setValue('u_just_absorbed','Duties cannot be absorbed by existing staff without delaying statutory deadlines.');
+       g.setValue('u_just_unfilled_impact','Leaving the position unfilled would increase backlog and processing time for the public.');
+       g.setValue('u_just_streamlining','The unit has consolidated tasks and automated intake where possible before requesting this position.');
+       if(c.dec) g.setValue('u_committee_decision',c.dec);
+       g.setValue('state',c.st);
+       if(c.close>0){ var cl=new GlideDateTime(op.getValue()); cl.addDaysUTC(c.close); var now=new GlideDateTime(); if(cl.after(now)) cl=now; g.setValue('closed_at',cl.getValue()); g.setValue('resolved_at',cl.getValue()); var cd=cl.getValue().split(' ')[0]; g.setValue('u_committee_date',cd); }
+       var id=g.insert(); if(id) made.push(id);
+      });
+      if(made.length!=10) throw new Error('Created '+made.length+' of 10');
+      ; if (typeof result !== 'undefined') return result;
+    })();
+    response.setBody({ success: true, result: (__result === undefined ? null : __result) });
+  } catch(e) {
+    response.setBody({ success: false, error: e + '', message: e.message || (e + '') });
+  }
+})(request, response);]]></operation_script>
+        <operation_uri>/api/now/v1/mcp_exec_1794358126333/run</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/run</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:48:52</sys_created_on>
+        <sys_id>ad2d852c97e05f945c91b63de053af88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>run</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_ws_operation_ad2d852c97e05f945c91b63de053af88</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:48:52</sys_updated_on>
+        <web_service_definition display_value="mcp_exec_1794358126333">c82d8d6c97e05f945c91b63de053af8a</web_service_definition>
+        <web_service_version display_value="v1">f02d49e497e05f945c91b63de053af0f</web_service_version>
+    </sys_ws_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_ws_operation_ad2d852c97e05f945c91b63de053af88</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri&gt;/api/now/mcp_exec_1794358126333/run&lt;/default_operation_uri&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;run&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+  try {
+    var result;
+    var __result = (function() {
+      var OFFERING='2054830f97d89f545c91b63de053af30', SERVICE='2df303cb97d89f545c91b63de053af6a';
+      var D={dev:'221f3db5c6112284009f4becd3039cc9',it:'221f79b7c6112284005d646b76ab978c',fin:'a581ab703710200044e0bfc8bcbe5de8',cs:'5d7f17f03710200044e0bfc8bcbe5d43',pm:'9a7ed3f03710200044e0bfc8bcbe5db7'};
+      var B={hr:'9dd58ec0870221003ff35d88e3e3ec16',it:'ac26c204870221003ff35d88e3e3ec61',fin:'bb06c204870221003ff35d88e3e3ec88',legal:'2d26c204870221003ff35d88e3e3ec61'};
+      B.legal='2d26c204870221003ff35d88e3e3ec62';
+      var cases=[
+       {d:15,h:9, t:'Revenue Agent II',cc:'R041C',g:'GS06',pos:'22104511',dep:D.fin,div:B.fin,city:'Little Rock',sal:48500,vr:'resignation',fs:'general_revenue',dec:'approved',st:'3',close:4,auth:40,fill:36,to:14},
+       {d:13,h:14,t:'Licensing Specialist',cc:'C056C',g:'GS05',pos:'22104622',dep:D.cs,div:B.legal,city:'Little Rock',sal:42300,vr:'retirement',fs:'special_revenue',dec:'approved',st:'3',close:5,auth:12,fill:10,to:9},
+       {d:12,h:10,t:'IT Support Technician',cc:'D063C',g:'IT04',pos:'22105031',dep:D.it,div:B.it,city:'Conway',sal:45900,vr:'resignation',fs:'cash',dec:'denied',st:'3',close:3,auth:18,fill:17,to:11},
+       {d:10,h:11,t:'Accountant I',cc:'A091C',g:'GS06',pos:'22105107',dep:D.fin,div:B.fin,city:'Little Rock',sal:47200,vr:'promotion',fs:'general_revenue',dec:'approved',st:'3',close:4,auth:22,fill:20,to:8},
+       {d:9, h:15,t:'Program Coordinator',cc:'P003C',g:'GS07',pos:'22105219',dep:D.pm,div:B.hr,city:'Fayetteville',sal:52800,vr:'new_position',fs:'federal',dec:'more_info',st:'18',close:0,auth:6,fill:6,to:5},
+       {d:7, h:9, t:'Investigator',cc:'G127C',g:'GS08',pos:'22105344',dep:D.cs,div:B.legal,city:'Jonesboro',sal:55400,vr:'termination',fs:'general_revenue',dec:'denied',st:'3',close:4,auth:9,fill:8,to:16},
+       {d:6, h:13,t:'Fiscal Support Specialist',cc:'C024C',g:'GS04',pos:'22105402',dep:D.fin,div:B.fin,city:'Hot Springs',sal:38700,vr:'transfer',fs:'cash',dec:'approved',st:'3',close:3,auth:15,fill:13,to:12},
+       {d:4, h:10,t:'Database Administrator',cc:'D034C',g:'IT07',pos:'22105518',dep:D.it,div:B.it,city:'Little Rock',sal:78900,vr:'resignation',fs:'general_revenue',dec:'more_info',st:'18',close:0,auth:4,fill:3,to:18},
+       {d:2, h:16,t:'Caseworker',cc:'S017C',g:'GS06',pos:'22105630',dep:D.cs,div:B.hr,city:'Pine Bluff',sal:44100,vr:'resignation',fs:'federal',dec:'',st:'50',close:0,auth:30,fill:26,to:21},
+       {d:1, h:11,t:'Payroll Services Specialist',cc:'A047C',g:'GS05',pos:'22105745',dep:D.dev,div:B.hr,city:'Little Rock',sal:41600,vr:'retirement',fs:'general_revenue',dec:'',st:'10',close:0,auth:8,fill:7,to:7}
+      ];
+      var made=[];
+      cases.forEach(function(c){
+       var op=new GlideDateTime(); op.addDaysUTC(-c.d); var p=op.getValue().split(' ')[0]; op.setValue(p+' '+(c.h+6&lt;10?'0':'')+(c.h+6)+':15:00');
+       var g=new GlideRecord('x_snc_sas_positi_0_case'); g.initialize(); g.setWorkflow(false);
+       g.setValue('short_description','Intent to Fill - '+c.t+' ('+c.pos+')');
+       g.setValue('service_offering',OFFERING); g.setValue('business_service',SERVICE);
+       g.setValue('opened_at',op.getValue()); g.setValue('contact_type','web'); g.setValue('priority','4');
+       g.setValue('u_job_title',c.t); g.setValue('u_class_code',c.cc); g.setValue('u_grade',c.g); g.setValue('u_position_number',c.pos);
+       g.setValue('u_department',c.dep); g.setValue('u_division',c.div); g.setValue('u_city_location',c.city); g.setValue('u_business_area','State Agency Operations');
+       g.setValue('u_request_date',p); g.setValue('u_vacated_by', c.vr=='new_position'?'N/A (new position)':'Prior incumbent');
+       g.setValue('u_vacancy_reason',c.vr); g.setValue('u_budget_status','budgeted'); g.setValue('u_fund_src_1',c.fs); g.setValue('u_fund_pct_1','100');
+       g.setValue('u_authorized_count',c.auth); g.setValue('u_filled_count',c.fill); g.setValue('u_turnover_rate',c.to);
+       g.setValue('u_requested_salary',c.sal); g.setValue('u_current_salary',c.sal);
+       g.setValue('u_responsibilities','Core duties of the '+c.t+' position supporting agency operations.');
+       g.setValue('u_just_absorbed','Duties cannot be absorbed by existing staff without delaying statutory deadlines.');
+       g.setValue('u_just_unfilled_impact','Leaving the position unfilled would increase backlog and processing time for the public.');
+       g.setValue('u_just_streamlining','The unit has consolidated tasks and automated intake where possible before requesting this position.');
+       if(c.dec) g.setValue('u_committee_decision',c.dec);
+       g.setValue('state',c.st);
+       if(c.close&gt;0){ var cl=new GlideDateTime(op.getValue()); cl.addDaysUTC(c.close); var now=new GlideDateTime(); if(cl.after(now)) cl=now; g.setValue('closed_at',cl.getValue()); g.setValue('resolved_at',cl.getValue()); var cd=cl.getValue().split(' ')[0]; g.setValue('u_committee_date',cd); }
+       var id=g.insert(); if(id) made.push(id);
+      });
+      if(made.length!=10) throw new Error('Created '+made.length+' of 10');
+      ; if (typeof result !== 'undefined') return result;
+    })();
+    response.setBody({ success: true, result: (__result === undefined ? null : __result) });
+  } catch(e) {
+    response.setBody({ success: false, error: e + '', message: e.message || (e + '') });
+  }
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/now/v1/mcp_exec_1794358126333/run&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/run&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;support_trailing_slash&gt;false&lt;/support_trailing_slash&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-11-11 00:48:52&lt;/sys_created_on&gt;&lt;sys_id&gt;ad2d852c97e05f945c91b63de053af88&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;run&lt;/sys_name&gt;&lt;sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0"&gt;a0b679642bd85310b7b1f93a5e91bff4&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Hiring Freeze / Intent to Fill Request"&gt;a0b679642bd85310b7b1f93a5e91bff4&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_ad2d852c97e05f945c91b63de053af88&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-11-11 00:48:52&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="mcp_exec_1794358126333"&gt;c82d8d6c97e05f945c91b63de053af8a&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;f02d49e497e05f945c91b63de053af0f&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-609418503</payload_hash>
+        <record_name>run</record_name>
+        <reverted_from/>
+        <source>41e0a85f975cdf545c91b63de053af7a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:48:52</sys_created_on>
+        <sys_id>ed2d852c97e05f945c91b63de053af8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1c8143e1e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:48:52</sys_updated_on>
+        <type>Scripted REST Resource</type>
+        <update_guid>6d2d852cf2e05f94434cd66253af498c</update_guid>
+        <update_guid_history>6d2d852cf2e05f94434cd66253af498c:-609418503</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:48:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_operation">sys_ws_operation</sys_db_object>
+        <sys_id>2642fa19281444379e6f9202c2750ea1</sys_id>
+        <sys_metadata>ad2d852c97e05f945c91b63de053af88</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>run</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_ws_operation_ad2d852c97e05f945c91b63de053af88</sys_update_name>
+        <sys_update_version display_value="sys_ws_operation_ad2d852c97e05f945c91b63de053af88">ed2d852c97e05f945c91b63de053af8d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:48:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+  <sys_ui_action_role action="DELETE" apply_defaults="true">
+    <sys_id>a42244b18e574f189d716c26963db58f</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sys_ui_action_role_a42244b18e574f189d716c26963db58f</sys_update_name>
+    <sys_ui_action>769bf5cf9c134605bfce06c93147c2d2</sys_ui_action>
+    <sys_user_role name="x_snc_sas_positi_0.admin">203889a629094803a65288ded70b2e7a</sys_user_role>
+  </sys_ui_action_role>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_ui_action_role_a42244b18e574f189d716c26963db58f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+  <sys_ui_action_role action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>a42244b18e574f189d716c26963db58f</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sys_ui_action_role_a42244b18e574f189d716c26963db58f</sys_update_name>
+    <sys_ui_action>769bf5cf9c134605bfce06c93147c2d2</sys_ui_action>
+    <sys_user_role name="x_snc_sas_positi_0.admin">203889a629094803a65288ded70b2e7a</sys_user_role>
+  </sys_ui_action_role>
+</record_update>]]></payload>
+        <payload_hash>1740258578</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>180b3dec2b1c5310b7b1f93a5e91bf4d</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:53:56</sys_created_on>
+        <sys_id>d21bf1602b5c5310b7b1f93a5e91bf2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a188cc0c650000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:53:56</sys_updated_on>
+        <type>UI Action Role</type>
+        <update_guid>521bf1603e5c5310ea4a4df54b4edd2a</update_guid>
+        <update_guid_history>521bf1603e5c5310ea4a4df54b4edd2a:-1524896576</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 06:22:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action_role">sys_ui_action_role</sys_db_object>
+        <sys_id>6a5aabf9204043fab3b9aed721ee4484</sys_id>
+        <sys_metadata>a42244b18e574f189d716c26963db58f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Additional Information.x_snc_sas_positi_0.admin</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_ui_action_role_a42244b18e574f189d716c26963db58f</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_role_a42244b18e574f189d716c26963db58f">d21bf1602b5c5310b7b1f93a5e91bf2b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 06:22:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

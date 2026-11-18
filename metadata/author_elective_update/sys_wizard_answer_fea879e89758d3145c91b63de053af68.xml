@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>Intent to Fill</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Intent to Fill</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">0247fe41ec4003108bb2d76241880cae</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:43:19</sys_created_on>
+        <sys_id>fea879e89758d3145c91b63de053af68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Intent to Fill</sys_name>
+        <sys_package display_value="SAS Position Management and Recruitment" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SAS Position Management and Recruitment">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_wizard_answer_fea879e89758d3145c91b63de053af68</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:43:19</sys_updated_on>
+        <table/>
+        <target_url>x_snc_sas_positi_0_case.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_wizard_answer_fea879e89758d3145c91b63de053af68</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>Intent to Fill</answer><button_label/><dependent_value/><element/><name>Intent to Fill</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">0247fe41ec4003108bb2d76241880cae</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-29 17:43:19</sys_created_on><sys_id>fea879e89758d3145c91b63de053af68</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Intent to Fill</sys_name><sys_package display_value="SAS Position Management and Recruitment" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package><sys_policy/><sys_scope display_value="SAS Position Management and Recruitment">a0b679642bd85310b7b1f93a5e91bff4</sys_scope><sys_update_name>sys_wizard_answer_fea879e89758d3145c91b63de053af68</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-29 17:43:19</sys_updated_on><table/><target_url>x_snc_sas_positi_0_case.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>722213585</payload_hash>
+        <record_name>Intent to Fill</record_name>
+        <reverted_from/>
+        <source>8b8e0d01973303105c91b63de053af38</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2026-10-06 07:24:51</sys_created_on>
+        <sys_id>d8389e7a97d4db545c91b63de053af75</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1a11019d5b80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Answer</type>
+        <update_guid>98389e7a65d4db5448d96211a8a36975</update_guid>
+        <update_guid_history>98389e7a65d4db5448d96211a8a36975:722213585</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:47:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>3b94f1de13b746d4b10532818ce72301</sys_id>
+        <sys_metadata>fea879e89758d3145c91b63de053af68</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Intent to Fill</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent display_value="Task">0247fe41ec4003108bb2d76241880cae</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_fea879e89758d3145c91b63de053af68</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_fea879e89758d3145c91b63de053af68">d8389e7a97d4db545c91b63de053af75</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:47:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

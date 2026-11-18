@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Calls sn_dt.DecisionTableAPI().getDecisions() against the ITF Request Requirement decision table for every combination of exempt, over_cap and itf_trigger, resolves each answer by re-querying sys_decision_multi_result, and asserts the resulting request_basis. Guards the decision_table binding and the sys_variable_value answer rows, whose loss makes every lookup return nothing without raising an error.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>true</fail_on_server_error>
+        <name>ITF Request Requirement decision table returns the correct basis for all six input combinations</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 04:03:47</sys_created_on>
+        <sys_id>c5e96bc741424aec9cf17c84aaab4feb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Request Requirement decision table returns the correct basis for all six input combinations</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_atf_test_c5e96bc741424aec9cf17c84aaab4feb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 04:03:47</sys_updated_on>
+        <test_origin>manual</test_origin>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=c5e96bc741424aec9cf17c84aaab4feb"/>
+</record_update>

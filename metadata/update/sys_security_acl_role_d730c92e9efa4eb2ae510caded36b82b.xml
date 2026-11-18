@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:24</sys_created_on>
+        <sys_id>d730c92e9efa4eb2ae510caded36b82b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0_classification.x_snc_sas_positi_0.requester</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_security_acl display_value="x_snc_sas_positi_0_classification">6482254b7bc14477b2510a15779068b2</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_d730c92e9efa4eb2ae510caded36b82b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:24</sys_updated_on>
+        <sys_user_role display_value="x_snc_sas_positi_0.requester" name="x_snc_sas_positi_0.requester">1f6ec04a4e2045b8ab29fea9bac34df4</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

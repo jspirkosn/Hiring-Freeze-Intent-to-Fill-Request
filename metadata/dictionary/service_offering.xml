@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="c90bba89ec0403108bb2d76241880cce" extends="cmdb_ci_service" label="Offering" max_length="40" name="service_offering" type="collection">
+        <element comments="Annual run cost allocated to this offering, entered by OST finance as a showback estimate." label="Annual run cost" max_length="32" name="x_snc_sas_positi_0_u_annual_run_cost" type="currency2"/>
+        <element comments="Estimated annual cost the state avoids by delivering this offering on the shared platform instead of a separate vendor build (vendor estimate minus OST run cost). Entered by OST finance as a showback estimate." label="Annual cost avoided" max_length="20" name="x_snc_sas_positi_0_u_annual_cost_avoided" type="decimal"/>
+    </element>
+</database>

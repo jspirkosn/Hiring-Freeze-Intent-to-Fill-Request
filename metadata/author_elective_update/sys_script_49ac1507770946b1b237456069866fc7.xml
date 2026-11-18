@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
+  <sys_script action="DELETE" apply_defaults="true">
+    <sys_id>49ac1507770946b1b237456069866fc7</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>sys_script_49ac1507770946b1b237456069866fc7</sys_update_name>
+    <abort_action>false</abort_action>
+    <access>package_private</access>
+    <action_delete>false</action_delete>
+    <action_insert>true</action_insert>
+    <action_query>false</action_query>
+    <action_update>false</action_update>
+    <active>true</active>
+    <add_message>false</add_message>
+    <advanced>true</advanced>
+    <change_fields>false</change_fields>
+    <client_callable>false</client_callable>
+    <collection>x_snc_sas_positi_0_case</collection>
+    <condition/>
+    <description/>
+    <execute_function>false</execute_function>
+    <filter_condition/>
+    <is_rest>false</is_rest>
+    <message/>
+    <name>ITF Set Defaults and Route</name>
+    <order>100</order>
+    <priority>100</priority>
+    <rest_method/>
+    <rest_method_text/>
+    <rest_service/>
+    <rest_service_text/>
+    <rest_variables/>
+    <role_conditions/>
+    <script><![CDATA[// Legacy (non-module) business-rule script for the Intent to Fill case table.
+//
+// Loaded into the "ITF Set Defaults and Route" business rule via Now.include().
+// Modules (import/export) are not supported in a configuration-type SDK project,
+// so this uses the platform-injected globals (current, previous, gs, GlideRecord).
+//
+// Runs `before insert`:
+//   1. Builds a default short_description when the requester left it blank.
+//   2. Looks up the agency-to-analyst routing record for the case department and
+//      pre-populates the executive approver and the assigned OPM analyst.
+// Never calls current.update() — this is a before rule.
+
+if (!current.getValue('short_description')) {
+    current.setValue(
+        'short_description',
+        'Intent to Fill - ' +
+            current.getValue('u_job_title') +
+            ' (' +
+            current.getValue('u_position_number') +
+            ')',
+    );
+}
+
+var routing = new GlideRecord('x_snc_sas_positi_0_routing');
+routing.addQuery('u_department', current.getValue('u_department'));
+routing.query();
+if (routing.next()) {
+    if (!current.getValue('u_exec_approver')) {
+        current.setValue('u_exec_approver', routing.getValue('u_exec_approver'));
+    }
+    var opmAnalyst = routing.getValue('u_opm_analyst');
+    if (opmAnalyst) {
+        current.setValue('assigned_to', opmAnalyst);
+    }
+}
+]]></script>
+    <sys_name>ITF Set Defaults and Route</sys_name>
+    <sys_policy/>
+    <template/>
+    <when>before</when>
+  </sys_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>sys_script_49ac1507770946b1b237456069866fc7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script"&gt;
+  &lt;sys_script action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;49ac1507770946b1b237456069866fc7&lt;/sys_id&gt;
+    &lt;sys_scope display_value="x_snc_sas_positi_0"&gt;a0b679642bd85310b7b1f93a5e91bff4&lt;/sys_scope&gt;
+    &lt;sys_update_name&gt;sys_script_49ac1507770946b1b237456069866fc7&lt;/sys_update_name&gt;
+    &lt;abort_action&gt;false&lt;/abort_action&gt;
+    &lt;access&gt;package_private&lt;/access&gt;
+    &lt;action_delete&gt;false&lt;/action_delete&gt;
+    &lt;action_insert&gt;true&lt;/action_insert&gt;
+    &lt;action_query&gt;false&lt;/action_query&gt;
+    &lt;action_update&gt;false&lt;/action_update&gt;
+    &lt;active&gt;true&lt;/active&gt;
+    &lt;add_message&gt;false&lt;/add_message&gt;
+    &lt;advanced&gt;true&lt;/advanced&gt;
+    &lt;change_fields&gt;false&lt;/change_fields&gt;
+    &lt;client_callable&gt;false&lt;/client_callable&gt;
+    &lt;collection&gt;x_snc_sas_positi_0_case&lt;/collection&gt;
+    &lt;condition/&gt;
+    &lt;description/&gt;
+    &lt;execute_function&gt;false&lt;/execute_function&gt;
+    &lt;filter_condition/&gt;
+    &lt;is_rest&gt;false&lt;/is_rest&gt;
+    &lt;message/&gt;
+    &lt;name&gt;ITF Set Defaults and Route&lt;/name&gt;
+    &lt;order&gt;100&lt;/order&gt;
+    &lt;priority&gt;100&lt;/priority&gt;
+    &lt;rest_method/&gt;
+    &lt;rest_method_text/&gt;
+    &lt;rest_service/&gt;
+    &lt;rest_service_text/&gt;
+    &lt;rest_variables/&gt;
+    &lt;role_conditions/&gt;
+    &lt;script&gt;&lt;![CDATA[// Legacy (non-module) business-rule script for the Intent to Fill case table.
+//
+// Loaded into the "ITF Set Defaults and Route" business rule via Now.include().
+// Modules (import/export) are not supported in a configuration-type SDK project,
+// so this uses the platform-injected globals (current, previous, gs, GlideRecord).
+//
+// Runs `before insert`:
+//   1. Builds a default short_description when the requester left it blank.
+//   2. Looks up the agency-to-analyst routing record for the case department and
+//      pre-populates the executive approver and the assigned OPM analyst.
+// Never calls current.update() — this is a before rule.
+
+if (!current.getValue('short_description')) {
+    current.setValue(
+        'short_description',
+        'Intent to Fill - ' +
+            current.getValue('u_job_title') +
+            ' (' +
+            current.getValue('u_position_number') +
+            ')',
+    );
+}
+
+var routing = new GlideRecord('x_snc_sas_positi_0_routing');
+routing.addQuery('u_department', current.getValue('u_department'));
+routing.query();
+if (routing.next()) {
+    if (!current.getValue('u_exec_approver')) {
+        current.setValue('u_exec_approver', routing.getValue('u_exec_approver'));
+    }
+    var opmAnalyst = routing.getValue('u_opm_analyst');
+    if (opmAnalyst) {
+        current.setValue('assigned_to', opmAnalyst);
+    }
+}
+]]&gt;&lt;/script&gt;
+    &lt;sys_name&gt;ITF Set Defaults and Route&lt;/sys_name&gt;
+    &lt;sys_policy/&gt;
+    &lt;template/&gt;
+    &lt;when&gt;before&lt;/when&gt;
+  &lt;/sys_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-1867169650</payload_hash>
+        <record_name>ITF Set Defaults and Route</record_name>
+        <reverted_from/>
+        <source>180b3dec2b1c5310b7b1f93a5e91bf4d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:53:55</sys_created_on>
+        <sys_id>0a1bb1602b5c5310b7b1f93a5e91bfb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a188cc08460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:53:55</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>c21bb160df5c5310f6f83206ce7f5bb1</update_guid>
+        <update_guid_history>c21bb160df5c5310f6f83206ce7f5bb1:1742391655</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 19:47:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>51958310731a4fc0b11f4e9812b95790</sys_id>
+        <sys_metadata>49ac1507770946b1b237456069866fc7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Set Defaults and Route</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent display_value="Intent to Fill">d2a4df985257490d954f0382ff6e53e9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>sys_script_49ac1507770946b1b237456069866fc7</sys_update_name>
+        <sys_update_version display_value="sys_script_49ac1507770946b1b237456069866fc7">0a1bb1602b5c5310b7b1f93a5e91bfb2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 19:47:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

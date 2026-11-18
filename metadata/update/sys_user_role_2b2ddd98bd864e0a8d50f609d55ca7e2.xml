@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Department Secretary / Agency Director. Reviews requests, completes the executive legal certification attestation, and digitally signs.</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id>TGjWuMhdf5hggEPRc9EgR/oYI+pgEOOlnX0MYysS1U4=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_sas_positi_0.approver</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>approver</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-29 17:36:02</sys_created_on>
+        <sys_id>2b2ddd98bd864e0a8d50f609d55ca7e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_sas_positi_0.approver</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_user_role_2b2ddd98bd864e0a8d50f609d55ca7e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-29 17:36:02</sys_updated_on>
+    </sys_user_role>
+</record_update>

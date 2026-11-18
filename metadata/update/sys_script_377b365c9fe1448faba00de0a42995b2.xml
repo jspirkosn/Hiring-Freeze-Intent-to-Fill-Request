@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_sas_positi_0_case</collection>
+        <condition>current.request_status.changesTo('awaiting_certification')</condition>
+        <description>On the transition into awaiting_certification, requires the org chart attachment, an offset position for unbudgeted requests, and funding splits totalling exactly 100%.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>ITF Submission Validation</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[// B.2 ITF Submission Validation
+//
+// Business rule script for x_snc_sas_positi_0_case. Loaded via Now.include().
+// Legacy (non-module) script using the platform-injected globals.
+//
+// Runs `before update`, gated by the rule's condition
+//   current.request_status.changesTo('awaiting_certification')
+// so it only fires on the transition into director certification. changesTo is
+// reliable here because this is an update-only rule: `previous` exists, so there
+// is a genuine prior value to compare against. (Contrast B.1, which is a derive
+// rule that also runs on insert and therefore must not be gated on change
+// detection at all.)
+//
+// Blocks submission unless the org chart is attached, an unbudgeted request
+// names its offset position, and the funding splits total exactly 100%.
+// Never calls current.update() — this is a before rule.
+(function executeRule(current, previous) {
+    var errors = [];
+
+    if (current.org_chart.nil()) {
+        errors.push(gs.getProperty('x_snc_sas_positi_0.msg_org_chart'));
+    }
+
+    if (current.getValue('budget_status') == 'unbudgeted' && current.offset_position_number.nil()) {
+        errors.push(gs.getProperty('x_snc_sas_positi_0.msg_offset_position'));
+    }
+
+    // Sum the child funding rows ROW BY ROW, deliberately NOT with GlideAggregate.
+    //
+    // The spec specified GlideAggregate.addAggregate('SUM', 'funding_pct'), but
+    // that was MEASURED returning a wrong total on this instance when the splits
+    // are uneven. Verified against live fixtures:
+    //   ITF0000114  rows 40 + 60  -> row-by-row 100, GlideAggregate SUM  40.00  WRONG
+    //   ITF0000116  rows 50 + 50  -> row-by-row 100, GlideAggregate SUM 100.00  ok
+    // The equal-rows case passes by coincidence, which is how this hid. Using the
+    // aggregate would abort certification on a legitimate 60/40 funded request.
+    var total = 0;
+    var f = new GlideRecord('x_snc_sas_positi_0_funding');
+    f.addQuery('parent_case', current.getUniqueValue());
+    f.query();
+    while (f.next()) {
+        total += parseFloat(f.getValue('funding_pct') || '0');
+    }
+
+    // funding_pct is Decimal(5,2), so compare with a tolerance rather than ==.
+    if (Math.abs(total - 100) > 0.001) {
+        errors.push(gs.getProperty('x_snc_sas_positi_0.msg_funding_total'));
+    }
+
+    if (errors.length > 0) {
+        for (var i = 0; i < errors.length; i++) {
+            gs.addErrorMessage(errors[i]);
+        }
+        current.setAbortAction(true);
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-13 23:39:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>377b365c9fe1448faba00de0a42995b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ITF Submission Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>sys_script_377b365c9fe1448faba00de0a42995b2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-13 23:39:14</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=377b365c9fe1448faba00de0a42995b2"/>
+</record_update>

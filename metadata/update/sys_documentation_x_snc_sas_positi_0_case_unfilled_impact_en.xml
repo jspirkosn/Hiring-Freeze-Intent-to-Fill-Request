@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="unfilled_impact" label="Q2: Impact if Unfilled" language="en" table="x_snc_sas_positi_0_case">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>unfilled_impact</element>
+            <help/>
+            <hint/>
+            <label>Q2: Impact if Unfilled</label>
+            <language>en</language>
+            <name>x_snc_sas_positi_0_case</name>
+            <plural>Q2: Impact if Unfilled</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-13 23:09:47</sys_created_on>
+            <sys_id>8d3a43c263594a26b7e2d4004d2794f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Q2: Impact if Unfilled</sys_name>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_sas_positi_0_case_unfilled_impact_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-13 23:09:47</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

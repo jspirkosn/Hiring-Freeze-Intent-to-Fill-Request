@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_scripts">
+    <pa_scripts action="INSERT_OR_UPDATE">
+        <arguments>business_service,service_offering</arguments>
+        <description/>
+        <name>Case by Taxonomy Node</name>
+        <script><![CDATA[function caseService() {
+	var s = current['business_service'];
+	if (!gs.nil(s)) return s.toString();
+	var o = current['service_offering'];
+	if (gs.nil(o)) return null;
+	var g = new GlideRecord('service_offering');
+	if (g.get(o)) return g.getValue('parent');
+	return null;
+}
+var getHierarchy = function(seed, parentField, tableName) {
+	var h = [];
+	while (seed) {
+		h.push(seed.toString());
+		var g = new GlideRecord(tableName);
+		if (g.get(seed)) { seed = g.getValue(parentField); } else { seed = null; }
+		if (new ArrayUtil().contains(h, seed)) break;
+		if (g.getValue(parentField) == g.getValue('sys_id')) break;
+	}
+	return h;
+};
+function caseTaxonomy() {
+	var s = caseService();
+	if (gs.nil(s)) return null;
+	var g = new GlideRecord('cmdb_ci_service');
+	if (!g.get(s)) return null;
+	return getHierarchy(g.getValue('spm_taxonomy_node'), 'parent', 'spm_taxonomy_node');
+}
+caseTaxonomy();]]></script>
+        <sys_class_name>pa_scripts</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-11 00:26:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d20805282ba81f90b7b1f93a5e91bf4c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Case by Taxonomy Node</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_update_name>pa_scripts_d20805282ba81f90b7b1f93a5e91bf4c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-11 00:35:01</sys_updated_on>
+        <table>sn_gsm_government_service_case</table>
+    </pa_scripts>
+    <sys_translated_text action="delete_multiple" query="documentkey=d20805282ba81f90b7b1f93a5e91bf4c"/>
+</record_update>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+  <question_choice action="DELETE" apply_defaults="true">
+    <sys_id>1dfefd8b2c9d447493313f0748924d92</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>question_choice_1dfefd8b2c9d447493313f0748924d92</sys_update_name>
+    <inactive>false</inactive>
+    <order>2</order>
+    <question cat_item="6756bc8b2cb74370abfa55299508bf93" name="itf_vacancy_reason" variable_set="NULL">5309b788d756458686aeba2d04a5f12a</question>
+    <text>Promotion</text>
+    <value>promotion</value>
+  </question_choice>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</application>
+        <file_path/>
+        <instance_id>007e62d7eb28c31056eafddacad0cdc0</instance_id>
+        <instance_name>seiodevdemo</instance_name>
+        <merge_base/>
+        <name>question_choice_1dfefd8b2c9d447493313f0748924d92</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+  <question_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>1dfefd8b2c9d447493313f0748924d92</sys_id>
+    <sys_scope display_value="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+    <sys_update_name>question_choice_1dfefd8b2c9d447493313f0748924d92</sys_update_name>
+    <inactive>false</inactive>
+    <order>2</order>
+    <question cat_item="6756bc8b2cb74370abfa55299508bf93" name="itf_vacancy_reason" variable_set="NULL">5309b788d756458686aeba2d04a5f12a</question>
+    <text>Promotion</text>
+    <value>promotion</value>
+  </question_choice>
+</record_update>]]></payload>
+        <payload_hash>-1514867198</payload_hash>
+        <record_name>Promotion</record_name>
+        <reverted_from/>
+        <source>814c96b69718db545c91b63de053afc2</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-05 20:05:28</sys_created_on>
+        <sys_id>5d5c56f69718db545c91b63de053aff4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a1ad50fc800000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-05 20:05:28</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>d95c56f6b818db54063b5f597386b3f3</update_guid>
+        <update_guid_history>d95c56f6b818db54063b5f597386b3f3:342156163</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Promotion">635b5b252b6c1bd0b7b1f93a5e91bfcf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-14 13:44:09</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>0b72b1652a434e37988d6f4417ebc7c1</sys_id>
+        <sys_metadata>1dfefd8b2c9d447493313f0748924d92</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Promotion</sys_name>
+        <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+        <sys_scope_delete display_value="">1ab7aecc24ee432185d0623bed818241</sys_scope_delete>
+        <sys_update_name>question_choice_1dfefd8b2c9d447493313f0748924d92</sys_update_name>
+        <sys_update_version display_value="question_choice_1dfefd8b2c9d447493313f0748924d92">5d5c56f69718db545c91b63de053aff4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-14 13:44:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

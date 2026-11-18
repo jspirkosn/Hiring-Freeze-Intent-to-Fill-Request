@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="7e608a9cb7a941b38efcce7f25217de8" sys_domain="global" table="x_snc_sas_positi_0_case" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6e39fb1dc8f44d18b38268c7c266f1de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Request Details" display_value="Request Details" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">c806ee8c1dc9423e84b54e7ed9c6c069</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>988bc3f539ea4349a3f645486f41e7e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Position Details" display_value="Position Details" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">77c1ca7b633f41b5afc3eac3b940ab64</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c51d7816031f46dcac6b19a6c12d37b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Vacancy Information" display_value="Vacancy Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">5c5795a9d90e4faa95915618d3308b04</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>36ae6ee925c045d186b93742ddb1ff30</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Candidate Information" display_value="Candidate Information" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">a0700e8c5c614fb79367e7bb27d8ef11</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cbaab0a17be14a91af82e96bf797423a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Workforce Data" display_value="Workforce Data" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">510fc737ea3b47df92c8a5954755f35e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9017dcb0a243403cb92b6b2c8694799f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Funding" display_value="Funding" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">1e645db421b84e01bff3ac57ded4bede</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aec9f62d16414f48bc7fabb5ded24b47</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Justification" display_value="Justification" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">dc56d3e529734e42a9852ea20a574160</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-12 16:51:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d35a8a381df64839b138300aab6543d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="Default view" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">7e608a9cb7a941b38efcce7f25217de8</sys_ui_form>
+            <sys_ui_section caption="Committee / OPM Decision" display_value="Committee / OPM Decision" name="x_snc_sas_positi_0_case" sys_domain="global" view="Default view">f6a85aa2900446eaa7cbdb89061e2be8</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-12 16:51:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_sas_positi_0_case</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-05 19:51:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7e608a9cb7a941b38efcce7f25217de8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Default view</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Hiring Freeze / Intent to Fill Request" source="x_snc_sas_positi_0">a0b679642bd85310b7b1f93a5e91bff4</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Hiring Freeze / Intent to Fill Request">a0b679642bd85310b7b1f93a5e91bff4</sys_scope>
+            <sys_update_name>sys_ui_form_sections_7e608a9cb7a941b38efcce7f25217de8</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-05 19:51:11</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f9389010d41a4c108c7e968274ce91ae" label="Position Classification" name="x_snc_sas_positi_0_classification" type="collection">
+        <element display="true" label="Class Code" mandatory="true" max_length="20" name="class_code" type="string" unique="true"/>
+        <element label="Advertising Exempt" name="advertising_exempt" type="boolean"/>
+        <element default="true" label="Active" name="active" type="boolean"/>
+        <element label="Shared Services Series" name="shared_services_series" type="boolean"/>
+        <element label="Hiring Freeze Exempt" name="hiring_freeze_exempt" type="boolean"/>
+        <element label="Job Series" max_length="80" name="job_series" type="string"/>
+        <element label="Title" mandatory="true" max_length="100" name="title" type="string"/>
+        <element label="Pay Table" max_length="20" name="pay_table" type="string"/>
+        <element label="Grade" max_length="20" name="grade" type="string"/>
+        <index name="index" unique="true">
+            <element name="class_code"/>
+        </index>
+        <index name="index2">
+            <element name="job_series"/>
+        </index>
+    </element>
+</database>
